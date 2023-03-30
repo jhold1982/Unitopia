@@ -53,6 +53,7 @@
 			children = (
 				642B638729D62AF1009BB090 /* UnitopiaApp.swift */,
 				642B638929D62AF1009BB090 /* ContentView.swift */,
+				642B639529D62B06009BB090 /* Views */,
 				642B638B29D62AF2009BB090 /* Assets.xcassets */,
 				642B638D29D62AF2009BB090 /* Preview Content */,
 			);
@@ -65,6 +66,13 @@
 				642B638E29D62AF2009BB090 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		642B639529D62B06009BB090 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
