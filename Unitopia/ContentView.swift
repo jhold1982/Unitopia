@@ -8,14 +8,30 @@
 import SwiftUI
 
 struct ContentView: View {
+	@State private var tabSelection = 0
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+		TabView(selection: $tabSelection) {
+			HomeView()
+				.tabItem {
+					Label("Home", systemImage: "house")
+				}
+				.tag(0)
+			TemperatureView()
+				.tabItem {
+					Label("Temperature", systemImage: "thermometer")
+				}
+				.tag(1)
+			DistanceView()
+				.tabItem {
+					Label("Distance", systemImage: "ruler")
+				}
+				.tag(2)
+			MassView()
+				.tabItem {
+					Label("Mass", systemImage: "scalemass")
+				}
+				.tag(3)
+		}
     }
 }
 

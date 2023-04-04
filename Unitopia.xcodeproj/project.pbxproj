@@ -11,6 +11,10 @@
 		642B638A29D62AF1009BB090 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642B638929D62AF1009BB090 /* ContentView.swift */; };
 		642B638C29D62AF2009BB090 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 642B638B29D62AF2009BB090 /* Assets.xcassets */; };
 		642B638F29D62AF2009BB090 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 642B638E29D62AF2009BB090 /* Preview Assets.xcassets */; };
+		643D4D0329DCC05400B33029 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643D4D0229DCC05400B33029 /* HomeView.swift */; };
+		643D4D0529DCC05C00B33029 /* TemperatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643D4D0429DCC05C00B33029 /* TemperatureView.swift */; };
+		643D4D0729DCC06B00B33029 /* DistanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643D4D0629DCC06B00B33029 /* DistanceView.swift */; };
+		643D4D0929DCC07500B33029 /* MassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643D4D0829DCC07500B33029 /* MassView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		642B638929D62AF1009BB090 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		642B638B29D62AF2009BB090 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		642B638E29D62AF2009BB090 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		643D4D0229DCC05400B33029 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		643D4D0429DCC05C00B33029 /* TemperatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureView.swift; sourceTree = "<group>"; };
+		643D4D0629DCC06B00B33029 /* DistanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceView.swift; sourceTree = "<group>"; };
+		643D4D0829DCC07500B33029 /* MassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MassView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +79,10 @@
 		642B639529D62B06009BB090 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				643D4D0229DCC05400B33029 /* HomeView.swift */,
+				643D4D0429DCC05C00B33029 /* TemperatureView.swift */,
+				643D4D0629DCC06B00B33029 /* DistanceView.swift */,
+				643D4D0829DCC07500B33029 /* MassView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -145,6 +157,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				643D4D0329DCC05400B33029 /* HomeView.swift in Sources */,
+				643D4D0729DCC06B00B33029 /* DistanceView.swift in Sources */,
+				643D4D0929DCC07500B33029 /* MassView.swift in Sources */,
+				643D4D0529DCC05C00B33029 /* TemperatureView.swift in Sources */,
 				642B638A29D62AF1009BB090 /* ContentView.swift in Sources */,
 				642B638829D62AF1009BB090 /* UnitopiaApp.swift in Sources */,
 			);
