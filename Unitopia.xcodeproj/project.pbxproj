@@ -15,6 +15,7 @@
 		643D4D0529DCC05C00B33029 /* TemperatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643D4D0429DCC05C00B33029 /* TemperatureView.swift */; };
 		643D4D0729DCC06B00B33029 /* DistanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643D4D0629DCC06B00B33029 /* DistanceView.swift */; };
 		643D4D0929DCC07500B33029 /* MassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643D4D0829DCC07500B33029 /* MassView.swift */; };
+		6494A20529DD5BF5002919F4 /* TimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6494A20429DD5BF5002919F4 /* TimeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		643D4D0429DCC05C00B33029 /* TemperatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureView.swift; sourceTree = "<group>"; };
 		643D4D0629DCC06B00B33029 /* DistanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceView.swift; sourceTree = "<group>"; };
 		643D4D0829DCC07500B33029 /* MassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MassView.swift; sourceTree = "<group>"; };
+		6494A20429DD5BF5002919F4 /* TimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				643D4D0429DCC05C00B33029 /* TemperatureView.swift */,
 				643D4D0629DCC06B00B33029 /* DistanceView.swift */,
 				643D4D0829DCC07500B33029 /* MassView.swift */,
+				6494A20429DD5BF5002919F4 /* TimeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				643D4D0329DCC05400B33029 /* HomeView.swift in Sources */,
+				6494A20529DD5BF5002919F4 /* TimeView.swift in Sources */,
 				643D4D0729DCC06B00B33029 /* DistanceView.swift in Sources */,
 				643D4D0929DCC07500B33029 /* MassView.swift in Sources */,
 				643D4D0529DCC05C00B33029 /* TemperatureView.swift in Sources */,

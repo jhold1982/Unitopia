@@ -31,7 +31,12 @@ struct ContentView: View {
 					Label("Mass", systemImage: "scalemass")
 				}
 				.tag(3)
+			TimeView()
+				.tabItem {
+					Label("Time", systemImage: "clock.arrow.2.circlepath")
+				}
 		}
+		.preferredColorScheme(.light)
     }
 }
 

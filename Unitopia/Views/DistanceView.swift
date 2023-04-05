@@ -9,7 +9,29 @@ import SwiftUI
 
 struct DistanceView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+		NavigationStack {
+			Form {
+				Section {
+					//
+				} header: {
+					Text("Amount to convert")
+						.foregroundColor(.primary)
+				}
+			}
+			.padding()
+			.scrollContentBackground(.hidden)
+			.background(
+				LinearGradient(
+					gradient: Gradient(
+						colors: [.cyan, .white]),
+						startPoint: .topLeading,
+						endPoint: .bottomTrailing
+				)
+				.ignoresSafeArea()
+			)
+			.navigationTitle("🏃🏼‍♂️ Distance 📏")
+			.navigationBarTitleDisplayMode(.inline)
+		}
     }
 }
 
