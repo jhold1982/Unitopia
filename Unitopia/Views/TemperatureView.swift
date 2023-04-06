@@ -64,7 +64,7 @@ struct TemperatureView: View {
 //						Text(conversions[$0])
 //					}
 //				}
-				.pickerStyle(.menu)
+//				.pickerStyle(.menu)
 				Picker("Convert from:", selection: $inputUnit) {
 					ForEach(unitTypes[selectedUnits], id: \.self) {
 						Text(formatter.string(from: $0).capitalized)

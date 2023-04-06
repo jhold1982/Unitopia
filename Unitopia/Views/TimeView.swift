@@ -11,8 +11,24 @@ struct TimeView: View {
     var body: some View {
 		NavigationStack {
 			Form {
-				//
+				Section {
+					//
+				} header: {
+					Text("Amount to convert")
+						.foregroundColor(.primary)
+				}
 			}
+			.padding()
+			.scrollContentBackground(.hidden)
+			.background(
+				LinearGradient(
+					gradient: Gradient(
+						colors: [.cyan, .white]),
+						startPoint: .topLeading,
+						endPoint: .bottomTrailing
+				)
+				.ignoresSafeArea()
+			)
 			.navigationTitle("⏳ Time 🕰️")
 			.navigationBarTitleDisplayMode(.inline)
 		}
