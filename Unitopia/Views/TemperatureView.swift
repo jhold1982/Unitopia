@@ -58,6 +58,7 @@ struct TemperatureView: View {
 				} header: {
 					Text("Amount to convert")
 						.foregroundColor(.primary)
+						.font(.subheadline.bold())
 				}
 //				Picker("Conversion", selection: $selectedUnits) {
 //					ForEach(0..<conversions.count, id: \.self) {
@@ -82,6 +83,7 @@ struct TemperatureView: View {
 				} header: {
 					Text("Result")
 						.foregroundColor(.primary)
+						.font(.subheadline.bold())
 				}
 				Button("Save") { }
 				/// Add list style save for temp amounts with forEach and onDelete up to 5 or 6 rows to be saved
@@ -105,8 +107,7 @@ struct TemperatureView: View {
 					Button("Reset", action: reset)
 						.foregroundColor(Color.red)
 						.font(.headline.bold())
-						
-					.padding()
+						.padding()
 				}
 			}
 			.toolbar {
