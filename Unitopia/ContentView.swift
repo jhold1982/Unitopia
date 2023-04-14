@@ -16,25 +16,11 @@ struct ContentView: View {
 					Label("Home", systemImage: "house")
 				}
 				.tag(0)
-			TemperatureView()
+			FeedbackView()
 				.tabItem {
-					Label("Temperature", systemImage: "thermometer")
+					Label("Feedback", systemImage: "person.wave.2.fill")
 				}
 				.tag(1)
-			DistanceView()
-				.tabItem {
-					Label("Distance", systemImage: "ruler")
-				}
-				.tag(2)
-			MassView()
-				.tabItem {
-					Label("Mass", systemImage: "scalemass")
-				}
-				.tag(3)
-			TimeView()
-				.tabItem {
-					Label("Time", systemImage: "clock.arrow.2.circlepath")
-				}
 		}
 		.preferredColorScheme(.light)
     }
