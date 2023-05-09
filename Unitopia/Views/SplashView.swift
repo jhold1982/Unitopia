@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SplashView: View {
-	@State private var isActive: Bool = false
+	@State private var isActive = false
     var body: some View {
 		ZStack {
 			if self.isActive {
@@ -16,7 +16,7 @@ struct SplashView: View {
 			} else {
 				Rectangle()
 					.background(Color.black)
-				Image("Unitopia.png")
+				Image("Unitopia")
 					.resizable()
 					.scaledToFit()
 					.frame(width: 300, height: 300)

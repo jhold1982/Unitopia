@@ -12,12 +12,11 @@ struct FeedbackView: View {
 	@State private var showingAlert = false
 	var body: some View {
 		ZStack {
-			LinearGradient(
-				gradient: Gradient(
-					colors: [.cyan, .white]),
+			LinearGradient(gradient: Gradient(
+				colors: [.indigo, .gray, .white, .white]),
 					startPoint: .topLeading,
 					endPoint: .bottomTrailing
-			)
+				)
 				.ignoresSafeArea()
 			VStack {
 				Text("Enjoying the app?")

@@ -7,11 +7,20 @@
 
 import SwiftUI
 
+struct HistoryItem: Identifiable {
+	let id = UUID()
+	let inputAmount: Double
+	let inputUnit: Dimension
+	let outputUnit: Dimension
+	let outputResult: String
+}
+
 struct HomeView: View {
 	@State private var input: Double = 0.0
 	@State private var selectedUnits = 0
 	@State private var inputUnit: Dimension = UnitTemperature.celsius
 	@State private var outputUnit: Dimension = UnitTemperature.fahrenheit
+	@State private var historyItems: [HistoryItem] = []
 	@FocusState private var inputIsFocused: Bool
 	let formatter: MeasurementFormatter
 	let conversionTypes = ["Temperature", "Distance", "Mass", "Time", "Speed"]
@@ -52,12 +61,11 @@ struct HomeView: View {
     var body: some View {
 		NavigationStack {
 			ZStack {
-				LinearGradient(
-					gradient: Gradient(
-						colors: [.cyan, .white]),
+				LinearGradient(gradient: Gradient(
+					colors: [.indigo, .gray, .white, .white]),
 						startPoint: .topLeading,
 						endPoint: .bottomTrailing
-				)
+					)
 					.ignoresSafeArea()
 				Form {
 					Section {
@@ -94,6 +102,31 @@ struct HomeView: View {
 							.foregroundColor(.primary)
 							.font(.subheadline.bold())
 					}
+//					Button("Save Result") {
+//						let newItem = HistoryItem(
+//							inputAmount: input,
+//							inputUnit: inputUnit,
+//							outputUnit: outputUnit,
+//							outputResult: result
+//						)
+//						historyItems.append(newItem)
+//					}
+//					// History list view
+//					VStack {
+//						Text("History")
+//							.font(.subheadline.bold())
+//							.foregroundColor(.primary)
+//						List(historyItems) { item in
+//							VStack(alignment: .leading) {
+//								Text("Input Amount: \(item.inputAmount, specifier: "%.2f")")
+//								Text("Conversion Types: \(item.inputUnit.symbol) to \(item.outputUnit.symbol)")
+//								Text("Output Result: \(item.outputResult)")
+//							}
+//						}
+//						.listStyle(.plain)
+//						.frame(height: 200)
+//					}
+//					.padding()
 				}
 				.padding()
 				.scrollContentBackground(.hidden)
@@ -102,7 +135,7 @@ struct HomeView: View {
 			.toolbar {
 				ToolbarItem {
 					Button("Reset", action: reset)
-						.foregroundColor(Color.red)
+						.foregroundColor(.black)
 						.font(.headline.bold())
 						.padding()
 				}
