@@ -7,33 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6419ED3C2A5B8969007A394C /* HistoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6419ED3B2A5B8969007A394C /* HistoryItem.swift */; };
+		6419ED412A5C61DA007A394C /* SettingsOptionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6419ED402A5C61DA007A394C /* SettingsOptionsViewModel.swift */; };
 		642B638829D62AF1009BB090 /* UnitopiaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642B638729D62AF1009BB090 /* UnitopiaApp.swift */; };
 		642B638A29D62AF1009BB090 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642B638929D62AF1009BB090 /* ContentView.swift */; };
 		642B638C29D62AF2009BB090 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 642B638B29D62AF2009BB090 /* Assets.xcassets */; };
 		642B638F29D62AF2009BB090 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 642B638E29D62AF2009BB090 /* Preview Assets.xcassets */; };
-		643068372A09DD8800237F17 /* TabModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643068362A09DD8800237F17 /* TabModel.swift */; };
 		643068392A09E18A00237F17 /* SavedResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643068382A09E18A00237F17 /* SavedResultsView.swift */; };
 		6430683B2A09E19900237F17 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6430683A2A09E19900237F17 /* SettingsView.swift */; };
-		6430683D2A0AC77A00237F17 /* TabShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6430683C2A0AC77A00237F17 /* TabShape.swift */; };
-		643068402A0ACE7C00237F17 /* TabPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6430683F2A0ACE7C00237F17 /* TabPosition.swift */; };
 		643D4D0329DCC05400B33029 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643D4D0229DCC05400B33029 /* HomeView.swift */; };
-		64544D2729E97A6F00F4F238 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64544D2629E97A6F00F4F238 /* SplashView.swift */; };
 		64544D2929E993C000F4F238 /* FeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64544D2829E993C000F4F238 /* FeedbackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6419ED3B2A5B8969007A394C /* HistoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryItem.swift; sourceTree = "<group>"; };
+		6419ED3D2A5B907B007A394C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6419ED402A5C61DA007A394C /* SettingsOptionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsOptionsViewModel.swift; sourceTree = "<group>"; };
 		642B638429D62AF1009BB090 /* Unitopia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Unitopia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		642B638729D62AF1009BB090 /* UnitopiaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitopiaApp.swift; sourceTree = "<group>"; };
 		642B638929D62AF1009BB090 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		642B638B29D62AF2009BB090 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		642B638E29D62AF2009BB090 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		643068362A09DD8800237F17 /* TabModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabModel.swift; sourceTree = "<group>"; };
 		643068382A09E18A00237F17 /* SavedResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedResultsView.swift; sourceTree = "<group>"; };
 		6430683A2A09E19900237F17 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		6430683C2A0AC77A00237F17 /* TabShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabShape.swift; sourceTree = "<group>"; };
-		6430683F2A0ACE7C00237F17 /* TabPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabPosition.swift; sourceTree = "<group>"; };
 		643D4D0229DCC05400B33029 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		64544D2629E97A6F00F4F238 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		64544D2829E993C000F4F238 /* FeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -48,6 +45,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6419ED3A2A5B8792007A394C /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+				6419ED3B2A5B8969007A394C /* HistoryItem.swift */,
+			);
+			path = DataModels;
+			sourceTree = "<group>";
+		};
+		6419ED3E2A5B973F007A394C /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				6419ED3D2A5B907B007A394C /* Info.plist */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		6419ED3F2A5C61BC007A394C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6419ED402A5C61DA007A394C /* SettingsOptionsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		642B637B29D62AF1009BB090 = {
 			isa = PBXGroup;
 			children = (
@@ -70,8 +91,9 @@
 				642B638729D62AF1009BB090 /* UnitopiaApp.swift */,
 				642B638929D62AF1009BB090 /* ContentView.swift */,
 				642B639529D62B06009BB090 /* Views */,
-				643068352A09DD4400237F17 /* Models */,
-				6430683E2A0ACE5D00237F17 /* Tabs */,
+				6419ED3F2A5C61BC007A394C /* ViewModel */,
+				6419ED3A2A5B8792007A394C /* DataModels */,
+				6419ED3E2A5B973F007A394C /* Configuration */,
 				642B638B29D62AF2009BB090 /* Assets.xcassets */,
 				642B638D29D62AF2009BB090 /* Preview Content */,
 			);
@@ -89,30 +111,12 @@
 		642B639529D62B06009BB090 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				64544D2829E993C000F4F238 /* FeedbackView.swift */,
 				643D4D0229DCC05400B33029 /* HomeView.swift */,
 				643068382A09E18A00237F17 /* SavedResultsView.swift */,
+				64544D2829E993C000F4F238 /* FeedbackView.swift */,
 				6430683A2A09E19900237F17 /* SettingsView.swift */,
-				64544D2629E97A6F00F4F238 /* SplashView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		643068352A09DD4400237F17 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				643068362A09DD8800237F17 /* TabModel.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		6430683E2A0ACE5D00237F17 /* Tabs */ = {
-			isa = PBXGroup;
-			children = (
-				6430683C2A0AC77A00237F17 /* TabShape.swift */,
-				6430683F2A0ACE7C00237F17 /* TabPosition.swift */,
-			);
-			path = Tabs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,12 +191,10 @@
 			files = (
 				643D4D0329DCC05400B33029 /* HomeView.swift in Sources */,
 				6430683B2A09E19900237F17 /* SettingsView.swift in Sources */,
-				64544D2729E97A6F00F4F238 /* SplashView.swift in Sources */,
-				6430683D2A0AC77A00237F17 /* TabShape.swift in Sources */,
-				643068402A0ACE7C00237F17 /* TabPosition.swift in Sources */,
+				6419ED412A5C61DA007A394C /* SettingsOptionsViewModel.swift in Sources */,
 				64544D2929E993C000F4F238 /* FeedbackView.swift in Sources */,
-				643068372A09DD8800237F17 /* TabModel.swift in Sources */,
 				642B638A29D62AF1009BB090 /* ContentView.swift in Sources */,
+				6419ED3C2A5B8969007A394C /* HistoryItem.swift in Sources */,
 				642B638829D62AF1009BB090 /* UnitopiaApp.swift in Sources */,
 				643068392A09E18A00237F17 /* SavedResultsView.swift in Sources */,
 			);
@@ -326,12 +328,13 @@
 				DEVELOPMENT_TEAM = N8877H53MP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Unitopia/Configuration/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -359,12 +362,13 @@
 				DEVELOPMENT_TEAM = N8877H53MP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Unitopia/Configuration/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

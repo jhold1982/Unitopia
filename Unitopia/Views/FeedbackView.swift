@@ -9,17 +9,17 @@ import SwiftUI
 import StoreKit
 
 struct FeedbackView: View {
+	
+	// MARK: - PROPERTIES
 	@State private var showingAlert = false
+	
+	
+	// MARK: - VIEW BODY
 	var body: some View {
 		ZStack {
-			LinearGradient(gradient: Gradient(
-				colors: [.indigo, .gray, .white, .white]),
-					startPoint: .topLeading,
-					endPoint: .bottomTrailing
-				)
-				.ignoresSafeArea()
+			
 			VStack {
-				Text("Enjoying the app?")
+				Text("Enjoying Unitopia so far?")
 					.font(.title)
 					.padding()
 
@@ -44,13 +44,13 @@ struct FeedbackView: View {
 						}),
 						secondaryButton: .cancel()
 					)
-				}
-			}
-		}
+				} //: END OF ALERT
+			} //: END OF VSTACK
+		} //: END OF ZSTACK
 	}
 }
 
-
+// MARK: - PREVIEWS
 struct FeedbackView_Previews: PreviewProvider {
     static var previews: some View {
         FeedbackView()

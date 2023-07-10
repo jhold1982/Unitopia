@@ -8,21 +8,33 @@
 import SwiftUI
 
 struct SavedResultsView: View {
+	
+	// MARK: - PROPERTIES
+	
+	
+	
+	// MARK: - VIEW BODY
     var body: some View {
-		ZStack {
-			LinearGradient(gradient: Gradient(
-				colors: [.indigo, .gray, .white, .white]),
-					startPoint: .topLeading,
-					endPoint: .bottomTrailing
-				)
-				.ignoresSafeArea()
-			Text("Saved Results")
-		}
-    }
+		NavigationStack {
+			List {
+//				Text("Input Amount: \(item.inputAmount, specifier: "%.2f")")
+//				Text("Conversion Types: \(item.inputUnit.symbol) to \(item.outputUnit.symbol)")
+//				Text("Output Result: \(item.outputResult)")
+			}
+			.navigationTitle("Saved Results")
+			.navigationBarTitleDisplayMode(.inline)
+			
+			
+		} //: END OF NAVIGATION STACK
+    } //: END OF VIEW BODY
+	
+	// MARK: - FUNCTIONS
+	
 }
 
+// MARK: - PREVIEWS
 struct SavedResultsView_Previews: PreviewProvider {
     static var previews: some View {
-        SavedResultsView()
+		SavedResultsView()
     }
 }
