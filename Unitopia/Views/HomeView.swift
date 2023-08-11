@@ -14,7 +14,7 @@ struct HomeView: View {
 	@State private var selectedUnits = 0
 	@State private var inputUnit: Dimension = UnitTemperature.celsius
 	@State private var outputUnit: Dimension = UnitTemperature.fahrenheit
-	@State private var historyItems: [HistoryItem] = []
+	
 	
 	@FocusState private var inputIsFocused: Bool
 	
@@ -108,18 +108,9 @@ struct HomeView: View {
 						.foregroundColor(.primary)
 						.font(.subheadline.bold())
 				}
-				Button("Save Result") {
-					let newItem = HistoryItem(
-						inputAmount: input,
-						inputUnit: inputUnit,
-						outputUnit: outputUnit,
-						outputResult: result
-					)
-					historyItems.append(newItem)
-				} //: END OF BUTTON
 				Button("Reset") {
 					reset()
-				}
+				} //: END OF RESET BUTTON
 				.foregroundColor(.red)
 			} //: END OF FORM
 			.navigationTitle("Unitopia")
@@ -130,12 +121,12 @@ struct HomeView: View {
 					inputIsFocused = false
 					}
 				}
-			}
+			} //: END OF TOOLBAR
 			.onChange(of: selectedUnits) { newSelection in
 				let units = unitTypes[newSelection]
 				inputUnit = units[0]
 				outputUnit = units[1]
-			}
+			} //: END OF ON CHANGE
 		}
     }
 	

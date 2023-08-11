@@ -17,9 +17,7 @@ struct SavedResultsView: View {
     var body: some View {
 		NavigationStack {
 			List {
-//				Text("Input Amount: \(item.inputAmount, specifier: "%.2f")")
-//				Text("Conversion Types: \(item.inputUnit.symbol) to \(item.outputUnit.symbol)")
-//				Text("Output Result: \(item.outputResult)")
+				// List out saved results here
 			}
 			.navigationTitle("Saved Results")
 			.navigationBarTitleDisplayMode(.inline)

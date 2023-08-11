@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6419ED3C2A5B8969007A394C /* HistoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6419ED3B2A5B8969007A394C /* HistoryItem.swift */; };
 		6419ED412A5C61DA007A394C /* SettingsOptionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6419ED402A5C61DA007A394C /* SettingsOptionsViewModel.swift */; };
 		642B638829D62AF1009BB090 /* UnitopiaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642B638729D62AF1009BB090 /* UnitopiaApp.swift */; };
 		642B638A29D62AF1009BB090 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642B638929D62AF1009BB090 /* ContentView.swift */; };
@@ -17,10 +16,12 @@
 		6430683B2A09E19900237F17 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6430683A2A09E19900237F17 /* SettingsView.swift */; };
 		643D4D0329DCC05400B33029 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643D4D0229DCC05400B33029 /* HomeView.swift */; };
 		64544D2929E993C000F4F238 /* FeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64544D2829E993C000F4F238 /* FeedbackView.swift */; };
+		647DD9762A85DD5C004C318D /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647DD9752A85DD5C004C318D /* PaywallView.swift */; };
+		647DD9782A85DD78004C318D /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647DD9772A85DD78004C318D /* OnboardingView.swift */; };
+		647DD97A2A85DEB7004C318D /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647DD9792A85DEB7004C318D /* Store.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6419ED3B2A5B8969007A394C /* HistoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryItem.swift; sourceTree = "<group>"; };
 		6419ED3D2A5B907B007A394C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6419ED402A5C61DA007A394C /* SettingsOptionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsOptionsViewModel.swift; sourceTree = "<group>"; };
 		642B638429D62AF1009BB090 /* Unitopia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Unitopia.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -32,6 +33,9 @@
 		6430683A2A09E19900237F17 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		643D4D0229DCC05400B33029 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		64544D2829E993C000F4F238 /* FeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackView.swift; sourceTree = "<group>"; };
+		647DD9752A85DD5C004C318D /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
+		647DD9772A85DD78004C318D /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		647DD9792A85DEB7004C318D /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,14 +49,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6419ED3A2A5B8792007A394C /* DataModels */ = {
-			isa = PBXGroup;
-			children = (
-				6419ED3B2A5B8969007A394C /* HistoryItem.swift */,
-			);
-			path = DataModels;
-			sourceTree = "<group>";
-		};
 		6419ED3E2A5B973F007A394C /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
@@ -92,7 +88,7 @@
 				642B638929D62AF1009BB090 /* ContentView.swift */,
 				642B639529D62B06009BB090 /* Views */,
 				6419ED3F2A5C61BC007A394C /* ViewModel */,
-				6419ED3A2A5B8792007A394C /* DataModels */,
+				647DD97B2A85E15A004C318D /* DataModel */,
 				6419ED3E2A5B973F007A394C /* Configuration */,
 				642B638B29D62AF2009BB090 /* Assets.xcassets */,
 				642B638D29D62AF2009BB090 /* Preview Content */,
@@ -115,8 +111,18 @@
 				643068382A09E18A00237F17 /* SavedResultsView.swift */,
 				64544D2829E993C000F4F238 /* FeedbackView.swift */,
 				6430683A2A09E19900237F17 /* SettingsView.swift */,
+				647DD9752A85DD5C004C318D /* PaywallView.swift */,
+				647DD9772A85DD78004C318D /* OnboardingView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		647DD97B2A85E15A004C318D /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				647DD9792A85DEB7004C318D /* Store.swift */,
+			);
+			path = DataModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,11 +196,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				643D4D0329DCC05400B33029 /* HomeView.swift in Sources */,
+				647DD9762A85DD5C004C318D /* PaywallView.swift in Sources */,
 				6430683B2A09E19900237F17 /* SettingsView.swift in Sources */,
+				647DD9782A85DD78004C318D /* OnboardingView.swift in Sources */,
 				6419ED412A5C61DA007A394C /* SettingsOptionsViewModel.swift in Sources */,
+				647DD97A2A85DEB7004C318D /* Store.swift in Sources */,
 				64544D2929E993C000F4F238 /* FeedbackView.swift in Sources */,
 				642B638A29D62AF1009BB090 /* ContentView.swift in Sources */,
-				6419ED3C2A5B8969007A394C /* HistoryItem.swift in Sources */,
 				642B638829D62AF1009BB090 /* UnitopiaApp.swift in Sources */,
 				643068392A09E18A00237F17 /* SavedResultsView.swift in Sources */,
 			);
