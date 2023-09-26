@@ -118,7 +118,7 @@ struct HomeView: View {
 				ToolbarItemGroup(placement: .keyboard) {
 					Spacer()
 					Button("Done") {
-					inputIsFocused = false
+						inputIsFocused = false
 					}
 				}
 			} //: END OF TOOLBAR

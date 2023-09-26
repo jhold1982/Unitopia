@@ -7,35 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6419ED412A5C61DA007A394C /* SettingsOptionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6419ED402A5C61DA007A394C /* SettingsOptionsViewModel.swift */; };
+		641597E32AB7B802004E4A75 /* ConversionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641597E22AB7B802004E4A75 /* ConversionView.swift */; };
 		642B638829D62AF1009BB090 /* UnitopiaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642B638729D62AF1009BB090 /* UnitopiaApp.swift */; };
 		642B638A29D62AF1009BB090 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642B638929D62AF1009BB090 /* ContentView.swift */; };
 		642B638C29D62AF2009BB090 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 642B638B29D62AF2009BB090 /* Assets.xcassets */; };
 		642B638F29D62AF2009BB090 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 642B638E29D62AF2009BB090 /* Preview Assets.xcassets */; };
-		643068392A09E18A00237F17 /* SavedResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643068382A09E18A00237F17 /* SavedResultsView.swift */; };
-		6430683B2A09E19900237F17 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6430683A2A09E19900237F17 /* SettingsView.swift */; };
 		643D4D0329DCC05400B33029 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643D4D0229DCC05400B33029 /* HomeView.swift */; };
-		64544D2929E993C000F4F238 /* FeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64544D2829E993C000F4F238 /* FeedbackView.swift */; };
-		647DD9762A85DD5C004C318D /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647DD9752A85DD5C004C318D /* PaywallView.swift */; };
-		647DD9782A85DD78004C318D /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647DD9772A85DD78004C318D /* OnboardingView.swift */; };
-		647DD97A2A85DEB7004C318D /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 647DD9792A85DEB7004C318D /* Store.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		641597E22AB7B802004E4A75 /* ConversionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionView.swift; sourceTree = "<group>"; };
 		6419ED3D2A5B907B007A394C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6419ED402A5C61DA007A394C /* SettingsOptionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsOptionsViewModel.swift; sourceTree = "<group>"; };
 		642B638429D62AF1009BB090 /* Unitopia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Unitopia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		642B638729D62AF1009BB090 /* UnitopiaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitopiaApp.swift; sourceTree = "<group>"; };
 		642B638929D62AF1009BB090 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		642B638B29D62AF2009BB090 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		642B638E29D62AF2009BB090 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		643068382A09E18A00237F17 /* SavedResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedResultsView.swift; sourceTree = "<group>"; };
-		6430683A2A09E19900237F17 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		643D4D0229DCC05400B33029 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		64544D2829E993C000F4F238 /* FeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackView.swift; sourceTree = "<group>"; };
-		647DD9752A85DD5C004C318D /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
-		647DD9772A85DD78004C318D /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
-		647DD9792A85DEB7004C318D /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,14 +43,6 @@
 				6419ED3D2A5B907B007A394C /* Info.plist */,
 			);
 			path = Configuration;
-			sourceTree = "<group>";
-		};
-		6419ED3F2A5C61BC007A394C /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				6419ED402A5C61DA007A394C /* SettingsOptionsViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		642B637B29D62AF1009BB090 = {
@@ -87,8 +67,6 @@
 				642B638729D62AF1009BB090 /* UnitopiaApp.swift */,
 				642B638929D62AF1009BB090 /* ContentView.swift */,
 				642B639529D62B06009BB090 /* Views */,
-				6419ED3F2A5C61BC007A394C /* ViewModel */,
-				647DD97B2A85E15A004C318D /* DataModel */,
 				6419ED3E2A5B973F007A394C /* Configuration */,
 				642B638B29D62AF2009BB090 /* Assets.xcassets */,
 				642B638D29D62AF2009BB090 /* Preview Content */,
@@ -107,22 +85,10 @@
 		642B639529D62B06009BB090 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				641597E22AB7B802004E4A75 /* ConversionView.swift */,
 				643D4D0229DCC05400B33029 /* HomeView.swift */,
-				643068382A09E18A00237F17 /* SavedResultsView.swift */,
-				64544D2829E993C000F4F238 /* FeedbackView.swift */,
-				6430683A2A09E19900237F17 /* SettingsView.swift */,
-				647DD9752A85DD5C004C318D /* PaywallView.swift */,
-				647DD9772A85DD78004C318D /* OnboardingView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		647DD97B2A85E15A004C318D /* DataModel */ = {
-			isa = PBXGroup;
-			children = (
-				647DD9792A85DEB7004C318D /* Store.swift */,
-			);
-			path = DataModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,7 +119,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1420;
-				LastUpgradeCheck = 1420;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					642B638329D62AF1009BB090 = {
 						CreatedOnToolsVersion = 14.2;
@@ -195,16 +161,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				641597E32AB7B802004E4A75 /* ConversionView.swift in Sources */,
 				643D4D0329DCC05400B33029 /* HomeView.swift in Sources */,
-				647DD9762A85DD5C004C318D /* PaywallView.swift in Sources */,
-				6430683B2A09E19900237F17 /* SettingsView.swift in Sources */,
-				647DD9782A85DD78004C318D /* OnboardingView.swift in Sources */,
-				6419ED412A5C61DA007A394C /* SettingsOptionsViewModel.swift in Sources */,
-				647DD97A2A85DEB7004C318D /* Store.swift in Sources */,
-				64544D2929E993C000F4F238 /* FeedbackView.swift in Sources */,
 				642B638A29D62AF1009BB090 /* ContentView.swift in Sources */,
 				642B638829D62AF1009BB090 /* UnitopiaApp.swift in Sources */,
-				643068392A09E18A00237F17 /* SavedResultsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +175,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -247,6 +208,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -261,7 +223,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -275,6 +237,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -307,6 +270,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -315,7 +279,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -330,8 +294,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1.0.0;
 				DEVELOPMENT_ASSET_PATHS = "\"Unitopia/Preview Content\"";
 				DEVELOPMENT_TEAM = N8877H53MP;
 				ENABLE_PREVIEWS = YES;
@@ -347,7 +312,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lefthandedapps.Unitopia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -364,8 +329,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1.0.0;
 				DEVELOPMENT_ASSET_PATHS = "\"Unitopia/Preview Content\"";
 				DEVELOPMENT_TEAM = N8877H53MP;
 				ENABLE_PREVIEWS = YES;
@@ -381,7 +347,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lefthandedapps.Unitopia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
