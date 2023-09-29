@@ -15,6 +15,8 @@ struct ConversionView: View {
 	@State private var inputUnit: Dimension = UnitTemperature.fahrenheit
 	@State private var outputUnit: Dimension = UnitTemperature.celsius
 	
+	@AppStorage("isDarkMode") private var isDarkMode = false
+	
 	@FocusState private var userInputIsFocused: Bool
 	
 	let formatter: MeasurementFormatter
@@ -25,13 +27,13 @@ struct ConversionView: View {
 		formatter.unitStyle = .short
 		
 		// Large Navigation Title
-		UINavigationBar.appearance().largeTitleTextAttributes = [
-			.foregroundColor: UIColor.creamyWhite
-		]
+//		UINavigationBar.appearance().largeTitleTextAttributes = [
+//			.foregroundColor: UIColor.creamyWhite
+//		]
 		// Inline Navigation Title
-		UINavigationBar.appearance().titleTextAttributes = [
-			.foregroundColor: UIColor.creamyWhite
-		]
+//		UINavigationBar.appearance().titleTextAttributes = [
+//			.foregroundColor: UIColor.creamyWhite
+//		]
 	}
 	
 	let conversionTypes = [
@@ -87,6 +89,37 @@ struct ConversionView: View {
     var body: some View {
 		NavigationStack {
 			Form {
+				
+				Section {
+					Picker("Coversion", selection: $selectedUnits) {
+						ForEach(0..<conversionTypes.count, id: \.self) {
+							Text(conversionTypes[$0])
+								
+						}
+					}
+//					.tint(.creamyWhite)
+//					.listRowBackground(Color.darkGrayBackground)
+					
+					Picker("Convert from:", selection: $inputUnit) {
+						ForEach(unitTypes[selectedUnits], id: \.self) {
+							Text(formatter.string(from: $0).capitalized)
+						}
+					}
+//					.tint(.creamyWhite)
+//					.listRowBackground(Color.darkGrayBackground)
+					
+					Picker("Convert to:", selection: $outputUnit) {
+						ForEach(unitTypes[selectedUnits], id: \.self) {
+							Text(formatter.string(from: $0).capitalized)
+						}
+					}
+//					.tint(.creamyWhite)
+//					.listRowBackground(Color.darkGrayBackground)
+				} header: {
+					Text("")
+						.font(.subheadline.bold())
+				}
+				
 				Section {
 					TextField("Enter amount to convert...", value: $input, format: .number)
 						.keyboardType(.decimalPad)
@@ -95,32 +128,9 @@ struct ConversionView: View {
 					Text("Amount to convert")
 						.font(.subheadline.bold())
 				}
-				.listRowBackground(Color.darkGrayBackground)
+//				.listRowBackground(Color.darkGrayBackground)
 				
-				Picker("Coversion", selection: $selectedUnits) {
-					ForEach(0..<conversionTypes.count, id: \.self) {
-						Text(conversionTypes[$0])
-							
-					}
-				}
-				.tint(.creamyWhite)
-				.listRowBackground(Color.darkGrayBackground)
 				
-				Picker("Convert from:", selection: $inputUnit) {
-					ForEach(unitTypes[selectedUnits], id: \.self) {
-						Text(formatter.string(from: $0).capitalized)
-					}
-				}
-				.tint(.creamyWhite)
-				.listRowBackground(Color.darkGrayBackground)
-				
-				Picker("Convert to:", selection: $outputUnit) {
-					ForEach(unitTypes[selectedUnits], id: \.self) {
-						Text(formatter.string(from: $0).capitalized)
-					}
-				}
-				.tint(.creamyWhite)
-				.listRowBackground(Color.darkGrayBackground)
 				
 				Section {
 					Text(result)
@@ -128,18 +138,21 @@ struct ConversionView: View {
 					Text("Result")
 						.font(.subheadline.bold())
 				}
-				.listRowBackground(Color.darkGrayBackground)
+//				.listRowBackground(Color.darkGrayBackground)
 				
 				Button("Reset") {
 					reset()
 				}
-				.listRowBackground(Color.darkGrayBackground)
+//				.listRowBackground(Color.darkGrayBackground)
+				
+				// Put this in a tab of settings
+//				Toggle("Dark Mode", isOn: $isDarkMode)
 				
 			}
 			.navigationTitle("Unitopia")
-			.background(.darkBlack)
-			.foregroundStyle(.creamyWhite)
-			.scrollContentBackground(.hidden)
+//			.background(.darkBlack)
+//			.foregroundStyle(.creamyWhite)
+//			.scrollContentBackground(.hidden)
 			.toolbar {
 				ToolbarItemGroup(placement: .keyboard) {
 					Spacer()

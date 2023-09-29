@@ -9,10 +9,11 @@ import SwiftUI
 
 @main
 struct UnitopiaApp: App {
+	@AppStorage("isDarkMode") private var isDarkMode = false
     var body: some Scene {
         WindowGroup {
             ContentView()
-				.preferredColorScheme(.light)
+				.preferredColorScheme(isDarkMode ? .dark : .light)
         }
     }
 }
