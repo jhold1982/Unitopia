@@ -91,7 +91,7 @@ struct ConversionView: View {
 			Form {
 				
 				Section {
-					Picker("Coversion", selection: $selectedUnits) {
+					Picker("Conversion", selection: $selectedUnits) {
 						ForEach(0..<conversionTypes.count, id: \.self) {
 							Text(conversionTypes[$0])
 								
@@ -121,7 +121,7 @@ struct ConversionView: View {
 				}
 				
 				Section {
-					TextField("Enter amount to convert...", value: $input, format: .number)
+					TextField("Enter an amount...", value: $input, format: .number)
 						.keyboardType(.decimalPad)
 						.focused($userInputIsFocused)
 				} header: {
@@ -133,7 +133,12 @@ struct ConversionView: View {
 				
 				
 				Section {
-					Text(result)
+					if userInputIsFocused {
+						Text("")
+					} else {
+						Text(result)
+					}
+					
 				} header: {
 					Text("Result")
 						.font(.subheadline.bold())
