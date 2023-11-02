@@ -10,9 +10,16 @@ import SwiftUI
 @main
 struct UnitopiaApp: App {
 	@AppStorage("isDarkMode") private var isDarkMode = false
+	@StateObject var dataController: DataController
+	init() {
+		let dataController = DataController()
+		_dataController = StateObject(wrappedValue: dataController)
+	}
     var body: some Scene {
         WindowGroup {
             ContentView()
+				.environmentObject(dataController)
+				.onAppear(perform: dataController.requestReview)
 				.preferredColorScheme(isDarkMode ? .dark : .light)
         }
     }

@@ -13,6 +13,7 @@
 		642B638C29D62AF2009BB090 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 642B638B29D62AF2009BB090 /* Assets.xcassets */; };
 		642B638F29D62AF2009BB090 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 642B638E29D62AF2009BB090 /* Preview Assets.xcassets */; };
 		643D4D0329DCC05400B33029 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643D4D0229DCC05400B33029 /* HomeView.swift */; };
+		64D77C682AF03A770031A12F /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D77C672AF03A770031A12F /* DataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		642B638B29D62AF2009BB090 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		642B638E29D62AF2009BB090 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		643D4D0229DCC05400B33029 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		64D77C672AF03A770031A12F /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 			children = (
 				642B638729D62AF1009BB090 /* UnitopiaApp.swift */,
 				642B638929D62AF1009BB090 /* ContentView.swift */,
+				64D77C672AF03A770031A12F /* DataController.swift */,
 				642B639529D62B06009BB090 /* Views */,
 				6419ED3E2A5B973F007A394C /* Configuration */,
 				642B638B29D62AF2009BB090 /* Assets.xcassets */,
@@ -161,6 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64D77C682AF03A770031A12F /* DataController.swift in Sources */,
 				641597E32AB7B802004E4A75 /* ConversionView.swift in Sources */,
 				643D4D0329DCC05400B33029 /* HomeView.swift in Sources */,
 				642B638A29D62AF1009BB090 /* ContentView.swift in Sources */,
