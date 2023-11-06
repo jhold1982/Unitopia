@@ -12,6 +12,7 @@ struct ConversionView: View {
 	// MARK: - VIEW PROPERTIES
 	@State private var input = 0.0
 	@State private var selectedUnits = 0
+	@State private var showResetAlert: Bool = false
 	@State private var inputUnit: Dimension = UnitTemperature.fahrenheit
 	@State private var outputUnit: Dimension = UnitTemperature.celsius
 	@EnvironmentObject var dataController: DataController
@@ -61,6 +62,7 @@ struct ConversionView: View {
 		]
 	]
 	
+	// MARK: - CUSTOM COLORS
 	let darkGrayBackground = Color("darkGrayBackground")
 	let creamyWhite = Color("creamyWhite")
 	let lightLightGray = Color("lightLightGray")
@@ -89,10 +91,13 @@ struct ConversionView: View {
 //		]
 	}
 	
+	
 	// MARK: - VIEW BODY
     var body: some View {
 		NavigationStack {
 			Form {
+				
+				// MARK: - CONVERSION
 				Section {
 					Picker("Conversion", selection: $selectedUnits) {
 						ForEach(0..<conversionTypes.count, id: \.self) {
@@ -125,6 +130,7 @@ struct ConversionView: View {
 						.font(.subheadline.bold())
 				}
 				
+				// MARK: - USER INPUT
 				Section {
 					TextField("Enter an amount...", value: $input, format: .number)
 						.keyboardType(.decimalPad)
@@ -135,9 +141,12 @@ struct ConversionView: View {
 				}
 //				.listRowBackground(Color.darkGrayBackground)
 				
+				// MARK: - RESULT
 				Section {
 					if userInputIsFocused {
 						Text("")
+					} else if input == 0 {
+						Text("0")
 					} else {
 						Text(result)
 					}
@@ -147,15 +156,37 @@ struct ConversionView: View {
 				}
 //				.listRowBackground(Color.darkGrayBackground)
 				
-				Button("Reset") {
-					reset()
+				// MARK: - BUTTONS
+				Button("Start Over") {
+					showResetAlert = true
 				}
-				.tint(.red)
+				.buttonStyle(ResetButtonModel())
+				.disabled(input == 0)
+				.opacity(input == 0 ? 0.5 : 1)
+				
 //				.listRowBackground(Color.darkGrayBackground)
 				
-				// Put this in a tab of settings
-				Toggle(isDarkMode ? "Light Mode" : "Dark Mode", isOn: $isDarkMode)
-				
+				// iOS 17 check for sf symbol animation
+				if #available(iOS 17, *) {
+					Toggle(
+						isOn: $isDarkMode,
+						label: {
+							Label(
+								title: { Text("") },
+								icon: {
+									Image(systemName: isDarkMode ? "moon.fill" : "sun.min")
+										.font(.title2)
+										.fontWeight(.semibold)
+										.frame(width: 30, height: 30)
+										.contentTransition(.symbolEffect(.replace))
+								}
+							)
+						}
+					)
+					.foregroundStyle(!isDarkMode ? Color.primary : Color.white)
+				} else {
+					Toggle(isDarkMode ? "Dark Mode" : "Light Mode", isOn: $isDarkMode)
+				}
 			}
 			.navigationTitle("Unitopia")
 //			.scrollContentBackground(.hidden)
@@ -173,6 +204,17 @@ struct ConversionView: View {
 				let units = unitTypes[newSelection]
 				inputUnit = units[0]
 				outputUnit = units[1]
+			}
+			// MARK: - ALERT
+			.alert(isPresented: $showResetAlert) {
+				Alert(
+					title: Text("Reset ALL THE THINGS?"),
+					message: Text("This will reset all options to their default values."),
+					primaryButton: .default(Text("Reset")) {
+						reset()
+					},
+					secondaryButton: .cancel(Text("Cancel"))
+				)
 			}
 		}
     }

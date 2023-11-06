@@ -12,7 +12,7 @@
 		642B638A29D62AF1009BB090 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642B638929D62AF1009BB090 /* ContentView.swift */; };
 		642B638C29D62AF2009BB090 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 642B638B29D62AF2009BB090 /* Assets.xcassets */; };
 		642B638F29D62AF2009BB090 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 642B638E29D62AF2009BB090 /* Preview Assets.xcassets */; };
-		643D4D0329DCC05400B33029 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643D4D0229DCC05400B33029 /* HomeView.swift */; };
+		64672E702AF483E800F972E4 /* ResetButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64672E6F2AF483E800F972E4 /* ResetButtonModel.swift */; };
 		64D77C682AF03A770031A12F /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D77C672AF03A770031A12F /* DataController.swift */; };
 /* End PBXBuildFile section */
 
@@ -24,7 +24,7 @@
 		642B638929D62AF1009BB090 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		642B638B29D62AF2009BB090 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		642B638E29D62AF2009BB090 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		643D4D0229DCC05400B33029 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		64672E6F2AF483E800F972E4 /* ResetButtonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetButtonModel.swift; sourceTree = "<group>"; };
 		64D77C672AF03A770031A12F /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -39,6 +39,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6418E5D92AF45AC40066BA6B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				64672E6F2AF483E800F972E4 /* ResetButtonModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6418E5DA2AF45BBC0066BA6B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				64D77C672AF03A770031A12F /* DataController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		6419ED3E2A5B973F007A394C /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
@@ -68,8 +84,9 @@
 			children = (
 				642B638729D62AF1009BB090 /* UnitopiaApp.swift */,
 				642B638929D62AF1009BB090 /* ContentView.swift */,
-				64D77C672AF03A770031A12F /* DataController.swift */,
-				642B639529D62B06009BB090 /* Views */,
+				642B639529D62B06009BB090 /* View */,
+				6418E5DA2AF45BBC0066BA6B /* Controller */,
+				6418E5D92AF45AC40066BA6B /* Model */,
 				6419ED3E2A5B973F007A394C /* Configuration */,
 				642B638B29D62AF2009BB090 /* Assets.xcassets */,
 				642B638D29D62AF2009BB090 /* Preview Content */,
@@ -85,13 +102,12 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		642B639529D62B06009BB090 /* Views */ = {
+		642B639529D62B06009BB090 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				641597E22AB7B802004E4A75 /* ConversionView.swift */,
-				643D4D0229DCC05400B33029 /* HomeView.swift */,
 			);
-			path = Views;
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,9 +180,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64672E702AF483E800F972E4 /* ResetButtonModel.swift in Sources */,
 				64D77C682AF03A770031A12F /* DataController.swift in Sources */,
 				641597E32AB7B802004E4A75 /* ConversionView.swift in Sources */,
-				643D4D0329DCC05400B33029 /* HomeView.swift in Sources */,
 				642B638A29D62AF1009BB090 /* ContentView.swift in Sources */,
 				642B638829D62AF1009BB090 /* UnitopiaApp.swift in Sources */,
 			);
@@ -300,7 +316,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.1;
+				CURRENT_PROJECT_VERSION = 1.0.2;
 				DEVELOPMENT_ASSET_PATHS = "\"Unitopia/Preview Content\"";
 				DEVELOPMENT_TEAM = N8877H53MP;
 				ENABLE_PREVIEWS = YES;
@@ -309,6 +325,7 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -316,7 +333,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lefthandedapps.Unitopia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -335,7 +352,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.1;
+				CURRENT_PROJECT_VERSION = 1.0.2;
 				DEVELOPMENT_ASSET_PATHS = "\"Unitopia/Preview Content\"";
 				DEVELOPMENT_TEAM = N8877H53MP;
 				ENABLE_PREVIEWS = YES;
@@ -344,6 +361,7 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -351,7 +369,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lefthandedapps.Unitopia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
