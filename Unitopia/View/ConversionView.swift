@@ -127,7 +127,6 @@ struct ConversionView: View {
 //					.listRowBackground(Color.darkGrayBackground)
 				} header: {
 					Text("")
-						.font(.subheadline.bold())
 				}
 				
 				// MARK: - USER INPUT
@@ -144,9 +143,9 @@ struct ConversionView: View {
 				// MARK: - RESULT
 				Section {
 					if userInputIsFocused {
-						Text("")
+						Text("--")
 					} else if input == 0 {
-						Text("0")
+						Text("--")
 					} else {
 						Text(result)
 					}
@@ -175,9 +174,9 @@ struct ConversionView: View {
 								title: { Text("") },
 								icon: {
 									Image(systemName: isDarkMode ? "moon.fill" : "sun.min")
-										.font(.title2)
-										.fontWeight(.semibold)
-										.frame(width: 30, height: 30)
+//										.font(.title3)
+//										.fontWeight(.semibold)
+//										.frame(width: 30, height: 30)
 										.contentTransition(.symbolEffect(.replace))
 								}
 							)
