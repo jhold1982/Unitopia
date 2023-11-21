@@ -15,6 +15,7 @@ struct ConversionView: View {
 	@State private var showResetAlert: Bool = false
 	@State private var inputUnit: Dimension = UnitTemperature.fahrenheit
 	@State private var outputUnit: Dimension = UnitTemperature.celsius
+	@State private var selection: String?
 	@EnvironmentObject var dataController: DataController
 	@AppStorage("isDarkMode") private var isDarkMode = false
 	@FocusState private var userInputIsFocused: Bool
@@ -125,6 +126,7 @@ struct ConversionView: View {
 					.pickerStyle(.menu)
 //					.tint(.creamyWhite)
 //					.listRowBackground(Color.darkGrayBackground)
+					
 				} header: {
 					Text("")
 				}
