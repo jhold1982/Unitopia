@@ -86,7 +86,6 @@ struct DropDownView: View {
     }
 	
 	// MARK: - METHODS
-	
 	@ViewBuilder
 	func OptionsView() -> some View {
 		VStack(spacing: 10) {

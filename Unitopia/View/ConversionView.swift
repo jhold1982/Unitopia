@@ -27,7 +27,8 @@ struct ConversionView: View {
 		"Distance",
 		"Mass",
 		"Time",
-		"Speed"
+		"Speed",
+		"Volume"
 	]
 	
 	let unitTypes = [
@@ -60,6 +61,12 @@ struct ConversionView: View {
 			UnitSpeed.milesPerHour,
 			UnitSpeed.kilometersPerHour,
 			UnitSpeed.metersPerSecond
+		],
+		[
+			UnitVolume.liters,
+			UnitVolume.fluidOunces,
+			UnitVolume.centiliters,
+			UnitVolume.milliliters
 		]
 	]
 	
