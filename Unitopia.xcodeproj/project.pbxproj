@@ -7,20 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6407964D2B04059B00755D10 /* ControlGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6407964C2B04059B00755D10 /* ControlGroupView.swift */; };
 		641597E32AB7B802004E4A75 /* ConversionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641597E22AB7B802004E4A75 /* ConversionView.swift */; };
 		642B638829D62AF1009BB090 /* UnitopiaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642B638729D62AF1009BB090 /* UnitopiaApp.swift */; };
 		642B638A29D62AF1009BB090 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642B638929D62AF1009BB090 /* ContentView.swift */; };
 		642B638C29D62AF2009BB090 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 642B638B29D62AF2009BB090 /* Assets.xcassets */; };
 		642B638F29D62AF2009BB090 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 642B638E29D62AF2009BB090 /* Preview Assets.xcassets */; };
 		64672E702AF483E800F972E4 /* ResetButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64672E6F2AF483E800F972E4 /* ResetButtonModel.swift */; };
-		64AE26342B0D369500224527 /* DropDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AE26332B0D369500224527 /* DropDownView.swift */; };
-		64AE26362B0D410500224527 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AE26352B0D410500224527 /* TestView.swift */; };
-		64D77C682AF03A770031A12F /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D77C672AF03A770031A12F /* DataController.swift */; };
+		64D77C682AF03A770031A12F /* ReviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D77C672AF03A770031A12F /* ReviewManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6407964C2B04059B00755D10 /* ControlGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlGroupView.swift; sourceTree = "<group>"; };
 		641597E22AB7B802004E4A75 /* ConversionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionView.swift; sourceTree = "<group>"; };
 		6419ED3D2A5B907B007A394C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		642B638429D62AF1009BB090 /* Unitopia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Unitopia.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -29,9 +25,7 @@
 		642B638B29D62AF2009BB090 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		642B638E29D62AF2009BB090 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		64672E6F2AF483E800F972E4 /* ResetButtonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetButtonModel.swift; sourceTree = "<group>"; };
-		64AE26332B0D369500224527 /* DropDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownView.swift; sourceTree = "<group>"; };
-		64AE26352B0D410500224527 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
-		64D77C672AF03A770031A12F /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		64D77C672AF03A770031A12F /* ReviewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +50,7 @@
 		6418E5DA2AF45BBC0066BA6B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				64D77C672AF03A770031A12F /* DataController.swift */,
+				64D77C672AF03A770031A12F /* ReviewManager.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -112,9 +106,6 @@
 			isa = PBXGroup;
 			children = (
 				641597E22AB7B802004E4A75 /* ConversionView.swift */,
-				6407964C2B04059B00755D10 /* ControlGroupView.swift */,
-				64AE26352B0D410500224527 /* TestView.swift */,
-				64AE26332B0D369500224527 /* DropDownView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -190,12 +181,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				64672E702AF483E800F972E4 /* ResetButtonModel.swift in Sources */,
-				64D77C682AF03A770031A12F /* DataController.swift in Sources */,
+				64D77C682AF03A770031A12F /* ReviewManager.swift in Sources */,
 				641597E32AB7B802004E4A75 /* ConversionView.swift in Sources */,
-				64AE26342B0D369500224527 /* DropDownView.swift in Sources */,
-				64AE26362B0D410500224527 /* TestView.swift in Sources */,
 				642B638A29D62AF1009BB090 /* ContentView.swift in Sources */,
-				6407964D2B04059B00755D10 /* ControlGroupView.swift in Sources */,
 				642B638829D62AF1009BB090 /* UnitopiaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,7 +316,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.2.1;
+				CURRENT_PROJECT_VERSION = 1.2.2;
 				DEVELOPMENT_ASSET_PATHS = "\"Unitopia/Preview Content\"";
 				DEVELOPMENT_TEAM = N8877H53MP;
 				ENABLE_PREVIEWS = YES;
@@ -345,7 +333,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.1;
+				MARKETING_VERSION = 1.2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lefthandedapps.Unitopia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -364,7 +352,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.2.1;
+				CURRENT_PROJECT_VERSION = 1.2.2;
 				DEVELOPMENT_ASSET_PATHS = "\"Unitopia/Preview Content\"";
 				DEVELOPMENT_TEAM = N8877H53MP;
 				ENABLE_PREVIEWS = YES;
@@ -381,7 +369,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.1;
+				MARKETING_VERSION = 1.2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lefthandedapps.Unitopia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

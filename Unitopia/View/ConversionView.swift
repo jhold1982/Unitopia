@@ -11,7 +11,7 @@ import CoreSpotlight
 
 struct ConversionView: View {
 	
-	// MARK: - VIEW PROPERTIES
+	// MARK: - Properies
 	@State private var input = 0.0
 	@State private var selectedUnits = 0
 	
@@ -24,12 +24,12 @@ struct ConversionView: View {
 	
 	@Environment(\.requestReview) private var requestReview
 	
-	@EnvironmentObject var dataController: DataController
+	@EnvironmentObject var dataController: ReviewManager
 	
 	@AppStorage("isDarkMode") private var isDarkMode = false
 	@AppStorage("processCompletedCount") var processCompletedCount = 0
-	@AppStorage("currentAppVersion") var currentAppVersion = "1.2.1"
-	@AppStorage("lastVersionPromptedForReview") var lastVersionPromptedForReview = "1.2.1"
+	@AppStorage("currentAppVersion") var currentAppVersion = "1.2.2"
+	@AppStorage("lastVersionPromptedForReview") var lastVersionPromptedForReview = "1.2.2"
 	
 	@FocusState private var userInputIsFocused: Bool
 	
@@ -77,6 +77,11 @@ struct ConversionView: View {
 		],
 		[
 			UnitVolume.liters,
+			UnitVolume.gallons,
+			UnitVolume.acreFeet,
+			UnitVolume.bushels,
+			UnitVolume.pints,
+			UnitVolume.quarts,
 			UnitVolume.fluidOunces,
 			UnitVolume.centiliters,
 			UnitVolume.milliliters,
@@ -84,7 +89,7 @@ struct ConversionView: View {
 		]
 	]
 	
-	// MARK: - CUSTOM COLORS
+	// MARK: - Custom Colors (not used)
 	let darkGrayBackground = Color("darkGrayBackground")
 	let creamyWhite = Color("creamyWhite")
 	let lightLightGray = Color("lightLightGray")
@@ -96,32 +101,20 @@ struct ConversionView: View {
 		return formatter.string(from: outputMeasurement)
 	}
 	
-	// MARK: - INITIALIZER
 	init() {
-		
 		formatter = MeasurementFormatter()
 		formatter.unitOptions = .providedUnit
 		formatter.unitStyle = .short
-		
-		// MARK: - LARGE NAV TITLE
-//		UINavigationBar.appearance().largeTitleTextAttributes = [
-//			.foregroundColor: UIColor.creamyWhite
-//		]
-		// MARK: - INLINE NAV TITLE
-//		UINavigationBar.appearance().titleTextAttributes = [
-//			.foregroundColor: UIColor.creamyWhite
-//		]
 	}
 	
-	
-	// MARK: - VIEW BODY
+	// MARK: - View Body
     var body: some View {
 		NavigationStack {
 			
 			if #available(iOS 17.0, *) {
 				Form {
 					
-					// MARK: - CONVERSION
+					// MARK: - Conversion
 					Section {
 						Picker("Conversion", selection: $selectedUnits) {
 							ForEach(0..<conversionTypes.count, id: \.self) {
@@ -129,8 +122,6 @@ struct ConversionView: View {
 							}
 						}
 						.pickerStyle(.menu)
-	//					.tint(.creamyWhite)
-	//					.listRowBackground(Color.darkGrayBackground)
 						
 						Picker("Convert from:", selection: $inputUnit) {
 							ForEach(unitTypes[selectedUnits], id: \.self) {
@@ -138,8 +129,6 @@ struct ConversionView: View {
 							}
 						}
 						.pickerStyle(.menu)
-	//					.tint(.creamyWhite)
-	//					.listRowBackground(Color.darkGrayBackground)
 						
 						Picker("Convert to:", selection: $outputUnit) {
 							ForEach(unitTypes[selectedUnits], id: \.self) {
@@ -147,14 +136,12 @@ struct ConversionView: View {
 							}
 						}
 						.pickerStyle(.menu)
-	//					.tint(.creamyWhite)
-	//					.listRowBackground(Color.darkGrayBackground)
 						
 					} header: {
 						Text("")
 					}
 					
-					// MARK: - USER INPUT
+					// MARK: - User Input
 					Section {
 						TextField("Enter an amount...", value: $input, format: .number)
 							.keyboardType(.decimalPad)
@@ -163,9 +150,8 @@ struct ConversionView: View {
 						Text("Amount to convert")
 							.font(.subheadline.bold())
 					}
-	//				.listRowBackground(Color.darkGrayBackground)
 					
-					// MARK: - RESULT
+					// MARK: - Result
 					Section {
 						if userInputIsFocused {
 							Text("--")
@@ -178,18 +164,14 @@ struct ConversionView: View {
 						Text("Result")
 							.font(.subheadline.bold())
 					}
-	//				.listRowBackground(Color.darkGrayBackground)
 					
-					// MARK: - BUTTONS
 					Button("Start Over") {
 						showResetAlert = true
 					}
 					.buttonStyle(ResetButtonModel())
 					.disabled(input == 0)
 					.opacity(input == 0 ? 0.5 : 1)
-					
-	//				.listRowBackground(Color.darkGrayBackground)
-					
+
 					// iOS 17 check for sf symbol animation
 					if #available(iOS 17, *) {
 						Toggle(
@@ -199,9 +181,6 @@ struct ConversionView: View {
 									title: { Text("") },
 									icon: {
 										Image(systemName: isDarkMode ? "moon.fill" : "sun.min")
-	//										.font(.title3)
-	//										.fontWeight(.semibold)
-	//										.frame(width: 30, height: 30)
 											.contentTransition(.symbolEffect(.replace))
 									}
 								)
@@ -214,9 +193,6 @@ struct ConversionView: View {
 					
 				}
 				.navigationTitle("Unitopia")
-	//			.scrollContentBackground(.hidden)
-	//			.foregroundStyle(.creamyWhite)
-	//			.background(.darkBlack)
 				.toolbar {
 					ToolbarItemGroup(placement: .keyboard) {
 						Spacer()
@@ -230,11 +206,10 @@ struct ConversionView: View {
 					inputUnit = units[0]
 					outputUnit = units[1]
 				}
-				// MARK: - ALERT
 				.alert(isPresented: $showResetAlert) {
 					Alert(
-						title: Text("Reset ALL THE THINGS?"),
-						message: Text("This will reset all options to their default values."),
+						title: Text("Skibiddi Rizz?"),
+						message: Text("This will sigma all gyatts to their default auras."),
 						primaryButton: .default(Text("Reset")) {
 							reset()
 						},
@@ -244,8 +219,7 @@ struct ConversionView: View {
 			}
 		}
     }
-	// MARK: - METHODS
-	/// Resets user inputted amounts for Input and Selected Units back to defaults
+
 	func reset() {
 		input = 0.0
 		selectedUnits = 0
@@ -261,18 +235,15 @@ struct ConversionView: View {
 		}
 	}
 	
-	/// Presents the rating and review request view after a two-second delay.
 	func presentReview() {
 		Task {
-			// Delay for two seconds to avoid interrupting the person using the app.
 			try await Task.sleep(for: .seconds(2))
-			
 			requestReview()
 		}
 	}
 }
 
-// MARK: - PREVIEWS
+// MARK: - Previews
 struct ConversionView_Previews: PreviewProvider {
     static var previews: some View {
 		ConversionView()

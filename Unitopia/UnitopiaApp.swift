@@ -13,14 +13,12 @@ struct UnitopiaApp: App {
 	@AppStorage("isDarkMode") private var isDarkMode = false
 	
 	// Data Controller for review request notification
-	@StateObject var dataController: DataController
+	@StateObject var dataController: ReviewManager
 	
 	init() {
-		let dataController = DataController()
+		let dataController = ReviewManager()
 		_dataController = StateObject(wrappedValue: dataController)
 	}
-	
-	
 	
     var body: some Scene {
         WindowGroup {

@@ -9,17 +9,16 @@ import SwiftUI
 
 struct ContentView: View {
 	
-	// MARK: - VIEW PROPERTIES
-	@EnvironmentObject var dataController: DataController
+	// MARK: - Properties
+	@EnvironmentObject var reviewManager: ReviewManager
 	
 	
-	// MARK: - VIEW BODY
+	// MARK: - View Body
     var body: some View {
 		ConversionView()
     }
 }
 
-// MARK: - PREVIEWS
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
 		ContentView()
