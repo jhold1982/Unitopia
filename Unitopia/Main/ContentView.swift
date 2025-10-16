@@ -48,6 +48,8 @@ struct ContentView: View {
 	/// The haptic engine used for providing tactile feedback.
 	@State private var engine: CHHapticEngine?
 	
+	@State private var showWelcomeScreen: Bool = false
+	
 	/// Environment value for requesting App Store reviews.
 	@Environment(\.requestReview) private var requestReview
 	
@@ -268,6 +270,7 @@ struct ContentView: View {
 		}
 	}
 	
+    // MARK: - Logic
 	/// Resets the application state to its initial values.
 	///
 	/// This function:
@@ -392,9 +395,6 @@ struct ContentView: View {
 	}
 }
 
-struct ConversionView_Previews: PreviewProvider {
-	static var previews: some View {
-		ContentView()
-		
-	}
+#Preview {
+    ContentView()
 }
