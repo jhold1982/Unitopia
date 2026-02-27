@@ -21,11 +21,11 @@ import Foundation
 ///     image: "moon.circle"
 /// )
 /// ```
-struct Feature: Decodable, Identifiable {
+struct Feature: Identifiable {
    /// A unique identifier for the feature.
    ///
    /// This property is automatically initialized with a new UUID when a Feature instance is created.
-   var id = UUID()
+   let id = UUID()
    
    /// The title of the feature.
    ///

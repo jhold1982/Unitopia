@@ -7,12 +7,16 @@
 
 import Foundation
 import StoreKit
-import CoreSpotlight
+import UIKit
 
 /// A manager class that handles requesting app reviews from users.
 ///
 /// This class is responsible for tracking app launches and requesting reviews
 /// at appropriate times based on the number of app launches.
+///
+/// Marked `@MainActor` because it accesses UIKit APIs (`UIApplication`, `SKStoreReviewController`)
+/// that must be called on the main thread.
+@MainActor
 class ReviewManager: ObservableObject {
 	
 	/// Requests an app review from the user when appropriate conditions are met.
@@ -24,7 +28,6 @@ class ReviewManager: ObservableObject {
 	/// The review request is only shown if there is an active window scene in the foreground.
 	///
 	/// - Note: Apple may throttle review requests regardless of how often this method is called.
-	/// Which is completely fucking retarted but what do I know? Praise Kier! 
 	func requestReview() {
 		let allScenes = UIApplication.shared.connectedScenes
 		let scene = allScenes.first { $0.activationState == .foregroundActive }
@@ -38,6 +41,5 @@ class ReviewManager: ObservableObject {
 			launchCount += 1
 		}
 		UserDefaults.standard.set(launchCount, forKey: "launchCount")
-		UserDefaults.standard.synchronize()
 	}
 }

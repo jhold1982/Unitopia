@@ -7,27 +7,72 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29CA62C87CE925B34DE8232B /* ConverterViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655B92D9C4D3AD577299B0A3 /* ConverterViewModelTests.swift */; };
+		3D44D92174E3A00459B557C0 /* FavoriteUnitPairTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922DD953C8E9879DBD5B3504 /* FavoriteUnitPairTests.swift */; };
 		64277F462EA143400035AEBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64277F442EA143400035AEBA /* Assets.xcassets */; };
-		64277F4B2EA143900035AEBA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64277F482EA143900035AEBA /* ContentView.swift */; };
 		64277F4C2EA143900035AEBA /* UnitopiaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64277F492EA143900035AEBA /* UnitopiaApp.swift */; };
 		642971452D72B6B300D02D79 /* WelcomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642971442D72B6B300D02D79 /* WelcomeScreenView.swift */; };
 		642971472D72B73C00D02D79 /* Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642971462D72B73C00D02D79 /* Feature.swift */; };
 		642B638F29D62AF2009BB090 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 642B638E29D62AF2009BB090 /* Preview Assets.xcassets */; };
+		6432438C2F524428004A20A0 /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6432438B2F524428004A20A0 /* HapticsManager.swift */; };
+		6432438E2F524429004A20A0 /* ConversionCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6432438D2F524429004A20A0 /* ConversionCategory.swift */; };
+		643243912F524440004A20A0 /* ConverterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643243902F524440004A20A0 /* ConverterViewModel.swift */; };
+		643243932F524814004A20A0 /* ConversionRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643243922F524814004A20A0 /* ConversionRecord.swift */; };
+		643243952F524815004A20A0 /* FavoriteUnitPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643243942F524815004A20A0 /* FavoriteUnitPair.swift */; };
+		643243972F52485E004A20A0 /* ConverterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643243962F52485E004A20A0 /* ConverterView.swift */; };
+		643243992F524879004A20A0 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643243982F524879004A20A0 /* SettingsView.swift */; };
+		6432439B2F52487A004A20A0 /* ConversionRecordRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6432439A2F52487A004A20A0 /* ConversionRecordRow.swift */; };
+		6432439D2F52487B004A20A0 /* FavoriteUnitPairRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6432439C2F52487B004A20A0 /* FavoriteUnitPairRow.swift */; };
+		6432439F2F524891004A20A0 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6432439E2F524891004A20A0 /* HomeView.swift */; };
+		643243A12F524892004A20A0 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643243A02F524892004A20A0 /* FavoritesView.swift */; };
+		643243A32F52489F004A20A0 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643243A22F52489F004A20A0 /* MainTabView.swift */; };
 		64672E702AF483E800F972E4 /* ResetButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64672E6F2AF483E800F972E4 /* ResetButtonModel.swift */; };
 		64D77C682AF03A770031A12F /* ReviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D77C672AF03A770031A12F /* ReviewManager.swift */; };
+		6CB3AFE4D28539A3E2CD031C /* ConversionRecordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A205A34EAAF09BE99467DD /* ConversionRecordTests.swift */; };
+		7470CD6F792F837BC1835835 /* HapticsManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D49155537E55B505DE1EF36 /* HapticsManagerTests.swift */; };
+		B2CDC59D80121A12BCF08A6D /* ConversionCategoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF62C84B1D530A9D69BA6FE6 /* ConversionCategoryTests.swift */; };
+		FE01B25AD0C5C1EDA9801D9F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AE42F8AC73A681C517B638B /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		5F3A907C97F4E2EB331122D7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 642B637C29D62AF1009BB090 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 642B638329D62AF1009BB090;
+			remoteInfo = Unitopia;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		1D49155537E55B505DE1EF36 /* HapticsManagerTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HapticsManagerTests.swift; sourceTree = "<group>"; };
+		5AE42F8AC73A681C517B638B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		6419ED3D2A5B907B007A394C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64277F442EA143400035AEBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		64277F482EA143900035AEBA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		64277F492EA143900035AEBA /* UnitopiaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitopiaApp.swift; sourceTree = "<group>"; };
 		642971442D72B6B300D02D79 /* WelcomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenView.swift; sourceTree = "<group>"; };
 		642971462D72B73C00D02D79 /* Feature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feature.swift; sourceTree = "<group>"; };
 		642B638429D62AF1009BB090 /* Unitopia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Unitopia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		642B638E29D62AF2009BB090 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6432438B2F524428004A20A0 /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
+		6432438D2F524429004A20A0 /* ConversionCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionCategory.swift; sourceTree = "<group>"; };
+		643243902F524440004A20A0 /* ConverterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterViewModel.swift; sourceTree = "<group>"; };
+		643243922F524814004A20A0 /* ConversionRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionRecord.swift; sourceTree = "<group>"; };
+		643243942F524815004A20A0 /* FavoriteUnitPair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteUnitPair.swift; sourceTree = "<group>"; };
+		643243962F52485E004A20A0 /* ConverterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterView.swift; sourceTree = "<group>"; };
+		643243982F524879004A20A0 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		6432439A2F52487A004A20A0 /* ConversionRecordRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionRecordRow.swift; sourceTree = "<group>"; };
+		6432439C2F52487B004A20A0 /* FavoriteUnitPairRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteUnitPairRow.swift; sourceTree = "<group>"; };
+		6432439E2F524891004A20A0 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		643243A02F524892004A20A0 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		643243A22F52489F004A20A0 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		64672E6F2AF483E800F972E4 /* ResetButtonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetButtonModel.swift; sourceTree = "<group>"; };
 		64D77C672AF03A770031A12F /* ReviewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewManager.swift; sourceTree = "<group>"; };
+		655B92D9C4D3AD577299B0A3 /* ConverterViewModelTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConverterViewModelTests.swift; sourceTree = "<group>"; };
+		922DD953C8E9879DBD5B3504 /* FavoriteUnitPairTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FavoriteUnitPairTests.swift; sourceTree = "<group>"; };
+		ACBD3F91DD719E03103360D5 /* UnitopiaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitopiaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1A205A34EAAF09BE99467DD /* ConversionRecordTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConversionRecordTests.swift; sourceTree = "<group>"; };
+		EF62C84B1D530A9D69BA6FE6 /* ConversionCategoryTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConversionCategoryTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,14 +83,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D8D3AF61FB4DE1B2D7FE8466 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE01B25AD0C5C1EDA9801D9F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		6418E5D92AF45AC40066BA6B /* Data Models */ = {
 			isa = PBXGroup;
 			children = (
-				64672E6F2AF483E800F972E4 /* ResetButtonModel.swift */,
+				6432438D2F524429004A20A0 /* ConversionCategory.swift */,
+				643243922F524814004A20A0 /* ConversionRecord.swift */,
+				643243942F524815004A20A0 /* FavoriteUnitPair.swift */,
 				642971462D72B73C00D02D79 /* Feature.swift */,
+				64672E6F2AF483E800F972E4 /* ResetButtonModel.swift */,
 			);
 			path = "Data Models";
 			sourceTree = "<group>";
@@ -53,6 +109,7 @@
 		6418E5DA2AF45BBC0066BA6B /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				6432438B2F524428004A20A0 /* HapticsManager.swift */,
 				64D77C672AF03A770031A12F /* ReviewManager.swift */,
 			);
 			path = Managers;
@@ -78,7 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				64277F492EA143900035AEBA /* UnitopiaApp.swift */,
-				64277F482EA143900035AEBA /* ContentView.swift */,
+				643243A22F52489F004A20A0 /* MainTabView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -88,6 +145,8 @@
 			children = (
 				642B638629D62AF1009BB090 /* Unitopia */,
 				642B638529D62AF1009BB090 /* Products */,
+				C13FBA7A5A1653D7CDA64AF0 /* Frameworks */,
+				DCBA71852A36A08C68F49F09 /* UnitopiaTests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				642B638429D62AF1009BB090 /* Unitopia.app */,
+				ACBD3F91DD719E03103360D5 /* UnitopiaTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -104,6 +164,7 @@
 			children = (
 				64277F4A2EA143900035AEBA /* Main */,
 				642B639529D62B06009BB090 /* Views */,
+				6432438F2F52442A004A20A0 /* ViewModels */,
 				6418E5DA2AF45BBC0066BA6B /* Managers */,
 				6418E5D92AF45AC40066BA6B /* Data Models */,
 				64277F452EA143400035AEBA /* Assets */,
@@ -124,14 +185,74 @@
 		642B639529D62B06009BB090 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6432439A2F52487A004A20A0 /* ConversionRecordRow.swift */,
+				643243962F52485E004A20A0 /* ConverterView.swift */,
+				643243A02F524892004A20A0 /* FavoritesView.swift */,
+				6432439C2F52487B004A20A0 /* FavoriteUnitPairRow.swift */,
+				6432439E2F524891004A20A0 /* HomeView.swift */,
+				643243982F524879004A20A0 /* SettingsView.swift */,
 				642971442D72B6B300D02D79 /* WelcomeScreenView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
+		6432438F2F52442A004A20A0 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				643243902F524440004A20A0 /* ConverterViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		AC0CB8E1A28BA8C940EA29F2 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				5AE42F8AC73A681C517B638B /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		C13FBA7A5A1653D7CDA64AF0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AC0CB8E1A28BA8C940EA29F2 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DCBA71852A36A08C68F49F09 /* UnitopiaTests */ = {
+			isa = PBXGroup;
+			children = (
+				EF62C84B1D530A9D69BA6FE6 /* ConversionCategoryTests.swift */,
+				E1A205A34EAAF09BE99467DD /* ConversionRecordTests.swift */,
+				655B92D9C4D3AD577299B0A3 /* ConverterViewModelTests.swift */,
+				922DD953C8E9879DBD5B3504 /* FavoriteUnitPairTests.swift */,
+				1D49155537E55B505DE1EF36 /* HapticsManagerTests.swift */,
+			);
+			path = UnitopiaTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1EA8852A8C296927FCA6BC0A /* UnitopiaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 88865F8AED793E27C7B9576C /* Build configuration list for PBXNativeTarget "UnitopiaTests" */;
+			buildPhases = (
+				FE7159638F6739764CBD6D7E /* Sources */,
+				D8D3AF61FB4DE1B2D7FE8466 /* Frameworks */,
+				8BDA8349DEBE172D53B3344B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A0B370CB5FD6114C7E486F12 /* PBXTargetDependency */,
+			);
+			name = UnitopiaTests;
+			productName = UnitopiaTests;
+			productReference = ACBD3F91DD719E03103360D5 /* UnitopiaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		642B638329D62AF1009BB090 /* Unitopia */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 642B639229D62AF2009BB090 /* Build configuration list for PBXNativeTarget "Unitopia" */;
@@ -178,6 +299,7 @@
 			projectRoot = "";
 			targets = (
 				642B638329D62AF1009BB090 /* Unitopia */,
+				1EA8852A8C296927FCA6BC0A /* UnitopiaTests */,
 			);
 		};
 /* End PBXProject section */
@@ -192,6 +314,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8BDA8349DEBE172D53B3344B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -199,18 +328,77 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64277F4B2EA143900035AEBA /* ContentView.swift in Sources */,
+				643243932F524814004A20A0 /* ConversionRecord.swift in Sources */,
 				64277F4C2EA143900035AEBA /* UnitopiaApp.swift in Sources */,
+				6432438C2F524428004A20A0 /* HapticsManager.swift in Sources */,
 				642971472D72B73C00D02D79 /* Feature.swift in Sources */,
+				6432439D2F52487B004A20A0 /* FavoriteUnitPairRow.swift in Sources */,
+				643243912F524440004A20A0 /* ConverterViewModel.swift in Sources */,
 				64672E702AF483E800F972E4 /* ResetButtonModel.swift in Sources */,
+				6432439B2F52487A004A20A0 /* ConversionRecordRow.swift in Sources */,
+				643243952F524815004A20A0 /* FavoriteUnitPair.swift in Sources */,
 				642971452D72B6B300D02D79 /* WelcomeScreenView.swift in Sources */,
+				643243A32F52489F004A20A0 /* MainTabView.swift in Sources */,
+				643243972F52485E004A20A0 /* ConverterView.swift in Sources */,
 				64D77C682AF03A770031A12F /* ReviewManager.swift in Sources */,
+				643243A12F524892004A20A0 /* FavoritesView.swift in Sources */,
+				6432439F2F524891004A20A0 /* HomeView.swift in Sources */,
+				6432438E2F524429004A20A0 /* ConversionCategory.swift in Sources */,
+				643243992F524879004A20A0 /* SettingsView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE7159638F6739764CBD6D7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2CDC59D80121A12BCF08A6D /* ConversionCategoryTests.swift in Sources */,
+				6CB3AFE4D28539A3E2CD031C /* ConversionRecordTests.swift in Sources */,
+				29CA62C87CE925B34DE8232B /* ConverterViewModelTests.swift in Sources */,
+				3D44D92174E3A00459B557C0 /* FavoriteUnitPairTests.swift in Sources */,
+				7470CD6F792F837BC1835835 /* HapticsManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		A0B370CB5FD6114C7E486F12 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Unitopia;
+			target = 642B638329D62AF1009BB090 /* Unitopia */;
+			targetProxy = 5F3A907C97F4E2EB331122D7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		16F3565F0BFFD7FF5B8E4E6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Unitopia.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Unitopia";
+			};
+			name = Debug;
+		};
+		5618757134549ED86D2FE393 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Unitopia.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Unitopia";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		642B639029D62AF2009BB090 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -340,7 +528,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.2.3;
+				CURRENT_PROJECT_VERSION = 1.3.1;
 				DEVELOPMENT_ASSET_PATHS = "\"Unitopia/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -356,7 +544,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.3;
+				MARKETING_VERSION = 1.3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lefthandedapps.Unitopia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -376,7 +564,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.2.3;
+				CURRENT_PROJECT_VERSION = 1.3.1;
 				DEVELOPMENT_ASSET_PATHS = "\"Unitopia/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -392,7 +580,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.3;
+				MARKETING_VERSION = 1.3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lefthandedapps.Unitopia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -422,6 +610,15 @@
 			buildConfigurations = (
 				642B639329D62AF2009BB090 /* Debug */,
 				642B639429D62AF2009BB090 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		88865F8AED793E27C7B9576C /* Build configuration list for PBXNativeTarget "UnitopiaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5618757134549ED86D2FE393 /* Release */,
+				16F3565F0BFFD7FF5B8E4E6F /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

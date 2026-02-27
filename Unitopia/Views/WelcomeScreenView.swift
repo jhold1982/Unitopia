@@ -36,11 +36,6 @@ struct WelcomeScreenView: View {
 	
 	@State private var isAnimating: Bool = false
 	
-	/// The current app version obtained from the main bundle.
-	///
-	/// This value is used to update `lastSeenVersion` when the welcome screen is dismissed.
-	private let currentVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.2.2"
-	
 	/// An array of features to display in the welcome screen.
 	///
 	/// Each feature includes a title, description, and a system image name to be used as an icon.
@@ -48,17 +43,17 @@ struct WelcomeScreenView: View {
 		Feature(
 			title: "Comprehensive Unit Conversion",
 			description: "Convert between hundreds of units across multiple categories, with precise results.",
-			image: "pencil"
+			image: "arrow.left.arrow.right"
 		),
 		Feature(
 			title: "User-Friendly Interface",
 			description: "Enjoy a seamless experience with dark mode, haptic feedback, and a convenient reset button.",
-			image: "sun.max"
+			image: "slider.horizontal.3"
 		),
 		Feature(
 			title: "Offline Functionality",
 			description: "Convert between units offline.",
-			image: "keyboard"
+			image: "wifi.slash"
 		)
 	]
 	
@@ -73,19 +68,14 @@ struct WelcomeScreenView: View {
 					Image("unitopiaIcon")
 						.resizable()
 						.scaledToFit()
-						.frame(width: 144, height: 180)
-						.clipShape(Circle())
+						.frame(width: 144, height: 144)
+						.clipShape(RoundedRectangle(cornerRadius: 28, style: .continuous))
 						.shadow(color: .gray, radius: 9)
 						.blur(radius: isAnimating ? 0 : 10)
 						.opacity(isAnimating ? 1 : 0)
 						.scaleEffect(isAnimating ? 1 : 0.5)
 						.animation(.easeOut(duration: 1), value: isAnimating)
 						.offset(y: isAnimating ? 0 : -40)
-						.onAppear(perform: {
-							isAnimating = true
-						})
-					
-					Spacer()
 					
 					Text("Welcome to Unitopia!")
 						.multilineTextAlignment(.center)
@@ -95,11 +85,6 @@ struct WelcomeScreenView: View {
 						.scaleEffect(isAnimating ? 1 : 0.5)
 						.animation(.easeOut(duration: 1.25), value: isAnimating)
 						.offset(y: isAnimating ? 0 : -40)
-						.onAppear(perform: {
-							isAnimating = true
-						})
-					
-					Spacer()
 					
 					ForEach(features) { feature in
 						HStack {
@@ -123,9 +108,6 @@ struct WelcomeScreenView: View {
 						.opacity(isAnimating ? 1 : 0)
 						.scaleEffect(isAnimating ? 1 : 0.5)
 						.animation(.easeOut(duration: 1.75), value: isAnimating)
-						.onAppear(perform: {
-							isAnimating = true
-						})
 					}
 				}
 			}
@@ -137,15 +119,12 @@ struct WelcomeScreenView: View {
 				.scaleEffect(isAnimating ? 1 : 0.5)
 				.animation(.easeOut(duration: 2), value: isAnimating)
 				.offset(y: isAnimating ? 0 : 40)
-				.onAppear(perform: {
-					isAnimating = true
-				})
 			
 			Button("Get Started") {
 				// Mark that the user has seen this welcome screen
 				hasSeenWelcome = true
 				// Save the current version as seen
-				lastSeenVersion = currentVersion
+				lastSeenVersion = Bundle.appVersion
 			}
 			.frame(maxWidth: .infinity, minHeight: 44)
 			.background(.blue)
@@ -156,11 +135,11 @@ struct WelcomeScreenView: View {
 			.scaleEffect(isAnimating ? 1 : 0.5)
 			.animation(.easeOut(duration: 2.5), value: isAnimating)
 			.offset(y: isAnimating ? 0 : 40)
-			.onAppear(perform: {
-				isAnimating = true
-			})
 		}
 		.padding()
+		.onAppear {
+			isAnimating = true
+		}
 	}
 }
 

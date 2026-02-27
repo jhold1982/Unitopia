@@ -6,6 +6,16 @@
 //
 
 import SwiftUI
+import SwiftData
+
+// MARK: - Bundle Extension
+
+extension Bundle {
+   /// The current app version string from the main bundle's Info.plist.
+   static var appVersion: String {
+      main.infoDictionary?["CFBundleShortVersionString"] as? String ?? ""
+   }
+}
 
 /// The main entry point for the Unitopia application.
 ///
@@ -36,11 +46,6 @@ struct UnitopiaApp: App {
    /// as an environment object.
    @StateObject var reviewManager: ReviewManager
 
-   /// The current app version obtained from the main bundle.
-   ///
-   /// This is used to compare against `lastSeenVersion` to determine if this is a new app version.
-   private let currentVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.2.2"
-   
    /// Initializes the app with required state objects.
    ///
    /// This initializer creates the review manager that will be used throughout the app.
@@ -53,18 +58,23 @@ struct UnitopiaApp: App {
    ///
    /// This sets up the main window group containing either the welcome screen or the main
    /// content view, based on whether the user needs to see the welcome screen.
+   /// The `reviewManager` environment object is injected at the WindowGroup level so it is
+   /// always available regardless of which branch is active.
    var body: some Scene {
 	   WindowGroup {
 		   if shouldShowWelcome() {
-			   WelcomeScreenView(hasSeenWelcome: $hasSeenWelcome, lastSeenVersion: $lastSeenVersion)
+               WelcomeScreenView(
+                hasSeenWelcome: $hasSeenWelcome,
+                lastSeenVersion: $lastSeenVersion
+               )
 				   .preferredColorScheme(.light)
 		   } else {
-			   ContentView()
-				   .environmentObject(reviewManager)
-				   .onAppear(perform: reviewManager.requestReview)
+			   MainTabView()
 				   .preferredColorScheme(isDarkMode ? .dark : .light)
 		   }
 	   }
+	   .environmentObject(reviewManager)
+	   .modelContainer(for: [ConversionRecord.self, FavoriteUnitPair.self])
    }
 
    /// Determines if the welcome screen should be shown.
@@ -75,7 +85,7 @@ struct UnitopiaApp: App {
    ///
    /// - Returns: A Boolean value indicating whether to show the welcome screen.
    private func shouldShowWelcome() -> Bool {
-	   let isNewVersion = lastSeenVersion != currentVersion
+	   let isNewVersion = lastSeenVersion != Bundle.appVersion
 	   return !hasSeenWelcome || isNewVersion
    }
 }
