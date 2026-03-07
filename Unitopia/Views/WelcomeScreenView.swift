@@ -42,17 +42,27 @@ struct WelcomeScreenView: View {
 	let features = [
 		Feature(
 			title: "Comprehensive Unit Conversion",
-			description: "Convert between hundreds of units across multiple categories, with precise results.",
+			description: "Convert between Temperature, Distance, Mass, Time, Speed, and Volume with precise results.",
 			image: "arrow.left.arrow.right"
 		),
 		Feature(
-			title: "User-Friendly Interface",
-			description: "Enjoy a seamless experience with dark mode, haptic feedback, and a convenient reset button.",
+			title: "Favorites",
+			description: "Tap the star in the converter to save a conversion and its unit pair for quick access later.",
+			image: "star"
+		),
+		Feature(
+			title: "Conversion History",
+			description: "Recent conversions are automatically saved and displayed on the Home tab.",
+			image: "clock.arrow.trianglehead.counterclockwise.rotate.90"
+		),
+		Feature(
+			title: "Dark Mode & Haptics",
+			description: "Toggle dark mode from Settings and enjoy custom haptic feedback throughout the app.",
 			image: "slider.horizontal.3"
 		),
 		Feature(
-			title: "Offline Functionality",
-			description: "Convert between units offline.",
+			title: "Offline",
+			description: "All conversions happen on-device — no internet connection required.",
 			image: "wifi.slash"
 		)
 	]
