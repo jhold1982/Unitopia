@@ -69,8 +69,9 @@ struct WelcomeScreenView: View {
 						.resizable()
 						.scaledToFit()
 						.frame(width: 144, height: 144)
-						.clipShape(RoundedRectangle(cornerRadius: 28, style: .continuous))
+						.clipShape(Circle())
 						.shadow(color: .gray, radius: 9)
+						.padding(.top, 12)
 						.blur(radius: isAnimating ? 0 : 10)
 						.opacity(isAnimating ? 1 : 0)
 						.scaleEffect(isAnimating ? 1 : 0.5)
@@ -136,7 +137,7 @@ struct WelcomeScreenView: View {
 			.animation(.easeOut(duration: 2.5), value: isAnimating)
 			.offset(y: isAnimating ? 0 : 40)
 		}
-		.padding()
+        .padding()
 		.onAppear {
 			isAnimating = true
 		}
