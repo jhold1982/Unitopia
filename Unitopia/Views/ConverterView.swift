@@ -171,19 +171,30 @@ struct ConverterView: View {
         let outputSymbol = viewModel.outputUnit.symbol
         let categoryName = ConversionCategory.all[viewModel.selectedCategoryIndex].name
 
+        let currentInput = viewModel.input
+
         // Skip if an identical conversion was recorded in the last 5 seconds
         let recentCutoff = Date.now.addingTimeInterval(-5)
-        let currentInput = viewModel.input
         let allRecent = FetchDescriptor<ConversionRecord>(
             predicate: #Predicate { $0.timestamp > recentCutoff }
         )
         let recentRecords = (try? modelContext.fetch(allRecent)) ?? []
-        let isDuplicate = recentRecords.contains {
+        let isRecentDuplicate = recentRecords.contains {
             $0.inputUnitSymbol == inputSymbol &&
             $0.outputUnitSymbol == outputSymbol &&
             $0.inputValue == currentInput
         }
-        if isDuplicate { return }
+        if isRecentDuplicate { return }
+
+        // Skip if this exact conversion was already saved via the star (isFavorite record exists)
+        let allRecords = (try? modelContext.fetch(FetchDescriptor<ConversionRecord>())) ?? []
+        let isAlreadyFavorited = allRecords.contains {
+            $0.isFavorite &&
+            $0.inputUnitSymbol == inputSymbol &&
+            $0.outputUnitSymbol == outputSymbol &&
+            $0.inputValue == currentInput
+        }
+        if isAlreadyFavorited { return }
 
         let record = ConversionRecord(
             inputValue: viewModel.input,
@@ -250,6 +261,36 @@ struct ConverterView: View {
                 outputUnitLabel: viewModel.label(for: viewModel.outputUnit)
             )
             modelContext.insert(pair)
+
+            // Also mark the current conversion as a favorite.
+            // recordConversion() may have already run (keyboard resign fires before the button
+            // action), so reuse that record if it exists rather than inserting a duplicate.
+            if viewModel.input != 0 {
+                let currentInput = viewModel.input
+                let allRecords = (try? modelContext.fetch(FetchDescriptor<ConversionRecord>())) ?? []
+                if let existing = allRecords.first(where: {
+                    $0.inputUnitSymbol == inputSymbol &&
+                    $0.outputUnitSymbol == outputSymbol &&
+                    $0.inputValue == currentInput
+                }) {
+                    existing.isFavorite = true
+                } else {
+                    let record = ConversionRecord(
+                        inputValue: viewModel.input,
+                        inputUnitSymbol: inputSymbol,
+                        outputUnitSymbol: outputSymbol,
+                        categoryName: categoryName,
+                        resultValue: viewModel.resultValue,
+                        formattedResult: viewModel.result,
+                        inputUnitLabel: viewModel.label(for: viewModel.inputUnit),
+                        outputUnitLabel: viewModel.label(for: viewModel.outputUnit),
+                        isFavorite: true
+                    )
+                    modelContext.insert(record)
+                    pruneHistoryIfNeeded()
+                }
+            }
+
             isCurrentPairFavorited = true
         }
         // Persist immediately so FavoritesView's @Query picks up the change
