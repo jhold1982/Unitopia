@@ -20,38 +20,35 @@ struct ConverterView: View {
 
     @Environment(\.requestReview) private var requestReview
     @Environment(\.modelContext) private var modelContext
-    @EnvironmentObject var dataController: ReviewManager
 
     @FocusState private var userInputIsFocused: Bool
 
     // MARK: - Init
-
-    /// Creates a converter with default (Temperature: Fahrenheit → Celsius) state.
     init() {
         _viewModel = State(wrappedValue: ConverterViewModel())
     }
 
     /// Creates a converter pre-populated from a saved `FavoriteUnitPair`.
     init(preselectedPair: FavoriteUnitPair) {
-        let vm = ConverterViewModel()
-        vm.configure(
+        let viewModel = ConverterViewModel()
+        viewModel.configure(
             categoryName: preselectedPair.categoryName,
             inputSymbol: preselectedPair.inputUnitSymbol,
             outputSymbol: preselectedPair.outputUnitSymbol
         )
-        _viewModel = State(wrappedValue: vm)
+        _viewModel = State(wrappedValue: viewModel)
     }
 
     /// Creates a converter pre-populated from a saved `ConversionRecord`.
     init(fromRecord record: ConversionRecord) {
-        let vm = ConverterViewModel()
-        vm.configure(
+        let viewModel = ConverterViewModel()
+        viewModel.configure(
             categoryName: record.categoryName,
             inputSymbol: record.inputUnitSymbol,
             outputSymbol: record.outputUnitSymbol
         )
-        vm.input = record.inputValue
-        _viewModel = State(wrappedValue: vm)
+        viewModel.input = record.inputValue
+        _viewModel = State(wrappedValue: viewModel)
     }
 
     // MARK: - View Body
@@ -149,21 +146,18 @@ struct ConverterView: View {
                 recordConversion()
             }
         }
-        .alert(isPresented: $showResetAlert) {
-            Alert(
-                title: Text("Reset Settings?"),
-                message: Text("This will reset your current conversion."),
-                primaryButton: .default(Text("Reset")) {
-                    viewModel.reset()
-                    viewModel.requestReviewIfAppropriate(using: requestReview)
-                },
-                secondaryButton: .cancel(Text("Cancel"))
-            )
+        .alert("Reset Settings?", isPresented: $showResetAlert) {
+            Button("Reset", role: .destructive) {
+                viewModel.reset()
+                viewModel.requestReviewIfAppropriate(using: requestReview)
+            }
+            Button("Cancel", role: .cancel) { }
+        } message: {
+            Text("This will reset your current conversion.")
         }
     }
 
     // MARK: - Conversion Recording
-
     /// Saves the current conversion to history. Skips duplicates within 5 seconds
     /// and prunes the oldest non-favorited records beyond the 100-record limit.
     private func recordConversion() {
@@ -178,12 +172,14 @@ struct ConverterView: View {
         let allRecent = FetchDescriptor<ConversionRecord>(
             predicate: #Predicate { $0.timestamp > recentCutoff }
         )
+        
         let recentRecords = (try? modelContext.fetch(allRecent)) ?? []
         let isRecentDuplicate = recentRecords.contains {
             $0.inputUnitSymbol == inputSymbol &&
             $0.outputUnitSymbol == outputSymbol &&
             $0.inputValue == currentInput
         }
+        
         if isRecentDuplicate { return }
 
         // Skip if this exact conversion was already saved via the star (isFavorite record exists)
@@ -302,6 +298,5 @@ struct ConverterView: View {
     NavigationStack {
         ConverterView()
             .modelContainer(for: [ConversionRecord.self, FavoriteUnitPair.self], inMemory: true)
-            .environmentObject(ReviewManager())
     }
 }

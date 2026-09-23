@@ -131,16 +131,19 @@ struct WelcomeScreenView: View {
 				.animation(.easeOut(duration: 2), value: isAnimating)
 				.offset(y: isAnimating ? 0 : 40)
 			
-			Button("Get Started") {
+			Button {
 				// Mark that the user has seen this welcome screen
 				hasSeenWelcome = true
 				// Save the current version as seen
 				lastSeenVersion = Bundle.appVersion
+			} label: {
+				Text("Get Started")
+					.frame(maxWidth: .infinity)
 			}
-			.frame(maxWidth: .infinity, minHeight: 44)
-			.background(.blue)
-			.foregroundStyle(.white)
-			.clipShape(Capsule())
+			.buttonStyle(.glassProminent)
+			.buttonBorderShape(.capsule)
+			.controlSize(.large)
+			.tint(.blue)
 			.blur(radius: isAnimating ? 0 : 10)
 			.opacity(isAnimating ? 1 : 0)
 			.scaleEffect(isAnimating ? 1 : 0.5)

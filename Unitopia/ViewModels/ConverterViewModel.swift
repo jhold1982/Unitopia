@@ -14,8 +14,9 @@ import Observation
 /// Owns all converter state, the formatted result, and the reset/review logic.
 /// `ConverterView` holds one instance via `@State` and reads from it directly —
 /// no `ObservableObject` overhead needed thanks to `@Observable`.
+@MainActor
 @Observable
-class ConverterViewModel {
+final class ConverterViewModel {
 
     // MARK: - Converter State
 
@@ -110,7 +111,7 @@ class ConverterViewModel {
 
         lastVersionPromptedForReview = currentVersion
         // Delay slightly so the prompt appears after the reset animation settles.
-        Task { @MainActor in
+        Task {
             try? await Task.sleep(for: .seconds(2))
             requestReview()
         }

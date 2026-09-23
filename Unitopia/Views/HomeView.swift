@@ -57,5 +57,4 @@ struct HomeView: View {
 #Preview {
     HomeView()
         .modelContainer(for: [ConversionRecord.self, FavoriteUnitPair.self], inMemory: true)
-        .environmentObject(ReviewManager())
 }

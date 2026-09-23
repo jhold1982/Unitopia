@@ -145,5 +145,4 @@ struct FavoritesView: View {
 #Preview {
     FavoritesView()
         .modelContainer(for: [ConversionRecord.self, FavoriteUnitPair.self], inMemory: true)
-        .environmentObject(ReviewManager())
 }

@@ -16,20 +16,13 @@ struct SettingsView: View {
         NavigationStack {
             Form {
                 Section("Appearance") {
-                    if #available(iOS 17, *) {
-                        Toggle(
-                            isOn: $isDarkMode,
-                            label: {
-                                Label {
-                                    Text(isDarkMode ? "Dark Mode" : "Light Mode")
-                                } icon: {
-                                    Image(systemName: isDarkMode ? "moon.fill" : "sun.min")
-                                        .contentTransition(.symbolEffect(.replace))
-                                }
-                            }
-                        )
-                    } else {
-                        Toggle(isDarkMode ? "Dark Mode" : "Light Mode", isOn: $isDarkMode)
+                    Toggle(isOn: $isDarkMode) {
+                        Label {
+                            Text(isDarkMode ? "Dark Mode" : "Light Mode")
+                        } icon: {
+                            Image(systemName: isDarkMode ? "moon.fill" : "sun.min")
+                                .contentTransition(.symbolEffect(.replace))
+                        }
                     }
                 }
 

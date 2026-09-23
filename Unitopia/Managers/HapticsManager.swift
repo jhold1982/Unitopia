@@ -12,7 +12,7 @@ import CoreHaptics
 /// Create one instance and hold it as a `@State` or `@StateObject` in the owning view.
 /// Call `prepare()` once on appear, then call `playResetPattern()` whenever haptic
 /// feedback is needed.
-class HapticsManager {
+final class HapticsManager {
 
     private var engine: CHHapticEngine?
 

@@ -27,7 +27,6 @@
 		643243A12F524892004A20A0 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643243A02F524892004A20A0 /* FavoritesView.swift */; };
 		643243A32F52489F004A20A0 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643243A22F52489F004A20A0 /* MainTabView.swift */; };
 		64672E702AF483E800F972E4 /* ResetButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64672E6F2AF483E800F972E4 /* ResetButtonModel.swift */; };
-		64D77C682AF03A770031A12F /* ReviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D77C672AF03A770031A12F /* ReviewManager.swift */; };
 		6CB3AFE4D28539A3E2CD031C /* ConversionRecordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A205A34EAAF09BE99467DD /* ConversionRecordTests.swift */; };
 		7470CD6F792F837BC1835835 /* HapticsManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D49155537E55B505DE1EF36 /* HapticsManagerTests.swift */; };
 		B2CDC59D80121A12BCF08A6D /* ConversionCategoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF62C84B1D530A9D69BA6FE6 /* ConversionCategoryTests.swift */; };
@@ -67,7 +66,6 @@
 		643243A02F524892004A20A0 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		643243A22F52489F004A20A0 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		64672E6F2AF483E800F972E4 /* ResetButtonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetButtonModel.swift; sourceTree = "<group>"; };
-		64D77C672AF03A770031A12F /* ReviewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewManager.swift; sourceTree = "<group>"; };
 		655B92D9C4D3AD577299B0A3 /* ConverterViewModelTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConverterViewModelTests.swift; sourceTree = "<group>"; };
 		922DD953C8E9879DBD5B3504 /* FavoriteUnitPairTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FavoriteUnitPairTests.swift; sourceTree = "<group>"; };
 		ACBD3F91DD719E03103360D5 /* UnitopiaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitopiaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,7 +108,6 @@
 			isa = PBXGroup;
 			children = (
 				6432438B2F524428004A20A0 /* HapticsManager.swift */,
-				64D77C672AF03A770031A12F /* ReviewManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -340,7 +337,6 @@
 				642971452D72B6B300D02D79 /* WelcomeScreenView.swift in Sources */,
 				643243A32F52489F004A20A0 /* MainTabView.swift in Sources */,
 				643243972F52485E004A20A0 /* ConverterView.swift in Sources */,
-				64D77C682AF03A770031A12F /* ReviewManager.swift in Sources */,
 				643243A12F524892004A20A0 /* FavoritesView.swift in Sources */,
 				6432439F2F524891004A20A0 /* HomeView.swift in Sources */,
 				6432438E2F524429004A20A0 /* ConversionCategory.swift in Sources */,
@@ -377,10 +373,10 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Unitopia.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Unitopia";
 			};
 			name = Debug;
@@ -390,10 +386,10 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Unitopia.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Unitopia";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -539,7 +535,7 @@
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -552,7 +548,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -575,7 +571,7 @@
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -588,7 +584,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

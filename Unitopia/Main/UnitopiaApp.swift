@@ -40,26 +40,10 @@ struct UnitopiaApp: App {
    /// It is updated to the current app version when the welcome screen is dismissed.
    @AppStorage("lastSeenVersion") private var lastSeenVersion: String = ""
 
-   /// The review manager that handles requesting app store reviews.
-   ///
-   /// This object is created at app initialization and shared with child views
-   /// as an environment object.
-   @StateObject var reviewManager: ReviewManager
-
-   /// Initializes the app with required state objects.
-   ///
-   /// This initializer creates the review manager that will be used throughout the app.
-   init() {
-	   let reviewManager = ReviewManager()
-	   _reviewManager = StateObject(wrappedValue: reviewManager)
-   }
-
    /// The body of the application defining its scene structure.
    ///
    /// This sets up the main window group containing either the welcome screen or the main
    /// content view, based on whether the user needs to see the welcome screen.
-   /// The `reviewManager` environment object is injected at the WindowGroup level so it is
-   /// always available regardless of which branch is active.
    var body: some Scene {
 	   WindowGroup {
 		   if shouldShowWelcome() {
@@ -73,7 +57,6 @@ struct UnitopiaApp: App {
 				   .preferredColorScheme(isDarkMode ? .dark : .light)
 		   }
 	   }
-	   .environmentObject(reviewManager)
 	   .modelContainer(for: [ConversionRecord.self, FavoriteUnitPair.self])
    }
 

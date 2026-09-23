@@ -9,6 +9,7 @@ import Testing
 import Foundation
 @testable import Unitopia
 
+@MainActor
 @Suite("ConverterViewModel")
 struct ConverterViewModelTests {
 
